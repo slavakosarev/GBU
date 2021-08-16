@@ -1,3 +1,4 @@
+```
 HTML 
  
 <label class="menu-btn" for="menu-switch">
@@ -9,8 +10,10 @@ HTML
 		<div class="menu-list-close-btn"></div>
 		<input id="menu-switch-close-btn" type="checkbox"></input>
 	</label>
+```
 
 
+```
 CSS
 
 #menu-switch {
@@ -26,8 +29,9 @@ CSS
 
 Возможно ли такое реализовать? Чтобы при включении одного iput отключался
 другой,а меню сразу скрывалось.
+```
 
-
+```
 HTML
 
 <ul class="breadcrumbs-list">
@@ -35,9 +39,9 @@ HTML
 	<li class="breadcrumbs-list-link"><a class="link" href="#"> men /</a></li>
 	<li class="breadcrumbs-list-link"><a class="link" href="#"> new arrivals</a></li>
 </ul>
+```
 
-
-
+```
 CSS
 
 .breadcrumbs-list {
@@ -67,3 +71,4 @@ CSS
          // как сделать последний элемент розовым?
       }
  }
+```
