@@ -40,35 +40,3 @@ HTML
 	<li class="breadcrumbs-list-link"><a class="link" href="#"> new arrivals</a></li>
 </ul>
 ```
-
-```
-CSS
-
-.breadcrumbs-list {
-      display: flex;
-      list-style-type: none;
-      text-transform: uppercase;
-      &-link {
-         text-decoration: none;
-         font-style: normal;
-         font-weight: 300;
-         font-size: 14px;
-         line-height: 17px;
-         color: #636363;
-         .link {
-             text-decoration: none;
-             &:hover {
-                color: $pink;
-                font-weight: 400;
-             }
-             &:active {
-                 color: $activ-color;
-             }
-         }
-      }
-      &-link:last-child {
-         color: $pink;
-         // как сделать последний элемент розовым?
-      }
- }
-```
