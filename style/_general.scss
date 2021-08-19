@@ -17,21 +17,10 @@ body {
 }
 .container {
    margin: 0 auto;
-   max-width: $width;
+   width: $width;
    padding: 0 15px 0 15px;
    box-sizing: border-box;
 }
-#menu-switch {
-   display: none;
-}
-#menu-switch:checked ~ .menu-list {
-   display: block;
-}
-#menu-switch-close-btn {
-   display: none;
-}
-// #menu-switch-close-btn:checked ~ #menu-switch:not(:checked) {
-// }
 
 /*==========Header==========*/
 
@@ -124,6 +113,12 @@ body {
       justify-content: space-around;
       align-items: center;
       .menu {
+         #menu-switch {
+            display: none;
+         }
+         #menu-switch:checked ~ .menu-list {
+            visibility: visible;
+         }
          &-btn {
             display: flex;
             justify-content: center;
@@ -164,7 +159,7 @@ body {
             }
          }
          &-list {
-            display: none;
+            visibility: hidden;
             width: 232px;
             min-height: $height-block-snd;
             padding: 16px 33px;
@@ -172,9 +167,15 @@ body {
             background-color: #f7e4e2;
             list-style: none;
             position: absolute;
-            top: $height-block-fst;
+            top: 75px;
             right: 0;
             z-index: 20;
+            #menu-switch-close-btn {
+               display: none;
+            }
+            #menu-switch-close-bt:checked ~ .menu-list {
+               visibility: hidden;
+            }
             &-close-btn {
                display: block;
                width: 12px;
@@ -294,6 +295,204 @@ body {
       }
    }
 }
+
+/*==========Main==========*/
+
+.products {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   align-content: center;
+   box-sizing: border-box;
+   flex-wrap: wrap;
+   width: 100%;
+   max-width: 1140px;
+   margin: 0 auto;
+   &-item {
+      display: block;
+      width: 360px;
+      position: relative;
+      text-decoration: none;
+      box-sizing: border-box;
+      &:hover .products-item-btn {
+         display: flex;
+      }
+      &:hover .products-item-btn:hover {
+         background-color: $white;
+         color: $black;
+         border: 1px solid $black;
+      }
+      &:hover .products-item-btn:hover svg {
+         fill: $black;
+      }
+      &:hover .products-item-btn:active {
+         background-color: transparent;
+         color: $pink;
+         border: 1px solid $pink;
+      }
+      &:hover .products-item-btn:active svg {
+         fill: $pink;
+      }
+      &:hover .products-item-photo {
+         filter: brightness(50%);
+      }
+      &:hover .products-item-photo-wrp:before {
+         content: "";
+         display: block;
+         width: 100%;
+         height: 100%;
+         background: rgba(58, 56, 56, 0.86);
+      }
+      &-photo-wrp {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         background-color: #f7e4e2;
+         box-sizing: border-box;
+      }
+      &-photo {
+         display: block;
+         margin: 0 auto;
+         box-sizing: border-box;
+      }
+      &-txt-wrp {
+         padding: 25px 18px 20px 18px;
+         box-sizing: border-box;
+         text-align: left;
+      }
+      &-title {
+         display: block;
+         margin: 0 0 12px 0;
+         text-transform: uppercase;
+         font-size: 13px;
+         line-height: 16px;
+         color: $black;
+      }
+      &-txt {
+         margin: 0 0 18px 0;
+         font-weight: 300;
+         font-size: 14px;
+         line-height: 17px;
+         color: #5d5d5d;
+      }
+      &-price {
+         display: block;
+         margin: 0;
+         font-size: 16px;
+         line-height: 19px;
+         color: $pink;
+      }
+      &-btn {
+         display: none;
+         justify-content: center;
+         align-items: center;
+         width: 160px;
+         padding: 10px;
+         box-sizing: border-box;
+         border: 1px solid $white;
+         background: transparent;
+         text-align: center;
+         font-size: 14px;
+         line-height: 17px;
+         color: $white;
+         position: absolute;
+         top: 30%;
+         left: calc(50% - 80px);
+      }
+      &-btn svg {
+         fill: $white;
+         margin: 0 11px 0 0;
+      }
+   }
+   &-btn-wrp {
+      margin-top: 28px;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      a {
+         display: block;
+         text-decoration: none;
+         .products-btn {
+            display: block;
+            width: 211px;
+            padding: 15px;
+            background-color: $pink;
+            border: 2px solid $pink;
+            box-sizing: border-box;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            word-break: break-all;
+            color: $white;
+            &:hover {
+               background-color: $white;
+               border: 2px solid $pink;
+               color: $pink;
+            }
+            &:active {
+               background-color: $white;
+               border: 2px solid $pink;
+               color: $activ-color;
+            }
+         }
+      }
+   }
+}
+
+/*==========Feachers==========*/
+.features {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 100%;
+   max-width: $width;
+   min-height: 341px;
+   padding: 20px;
+   margin: 95px auto 0 auto;
+   background-color: $black;
+   box-sizing: border-box;
+   &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 300px;
+      margin: 0 90px 0 0;
+      &-item:nth-child(4n-1) {
+         margin: 0;
+      }
+      &-icon {
+         display: block;
+         margin: 0 0 28px 0;
+         fill: $pink;
+      }
+      &-title {
+         display: block;
+         width: 100%;
+         margin: 0 0 16px 0;
+         font-style: normal;
+         font-weight: 400;
+         font-size: 20px;
+         line-height: 24px;
+         color: $white;
+         text-align: center;
+      }
+      &-txt {
+         font-style: normal;
+         font-weight: 300;
+         font-size: 14px;
+         line-height: 17px;
+         text-align: center;
+         color: $white;
+      }
+   }
+}
+
 /*==========Footer==========*/
 
 .subscribe {
