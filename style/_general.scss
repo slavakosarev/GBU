@@ -15,11 +15,12 @@ body {
    color: $black;
    background-color: $white;
 }
+a {
+   text-decoration: none;
+}
 .container {
    margin: 0 auto;
-   width: $width;
-   padding: 0 15px 0 15px;
-   box-sizing: border-box;
+   max-width: $width;
 }
 
 /*==========Header==========*/
@@ -53,7 +54,6 @@ body {
          display: block;
          width: 44px;
          height: 38px;
-         text-decoration: none;
          color: $white;
          &:hover {
             filter: brightness(30%);
@@ -119,6 +119,7 @@ body {
          #menu-switch:checked ~ .menu-list {
             visibility: visible;
          }
+         // не работает
          &-btn {
             display: flex;
             justify-content: center;
@@ -170,12 +171,7 @@ body {
             top: 75px;
             right: 0;
             z-index: 20;
-            #menu-switch-close-btn {
-               display: none;
-            }
-            #menu-switch-close-bt:checked ~ .menu-list {
-               visibility: hidden;
-            }
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
             &-close-btn {
                display: block;
                width: 12px;
@@ -230,7 +226,6 @@ body {
                margin: 0 0 11px 0;
                color: $pink;
                text-transform: uppercase;
-               text-decoration: none;
             }
             &-items:hover > a {
                color: #9889d7;
@@ -250,14 +245,9 @@ body {
                      margin: 0 0 11px 0;
                      color: #6f6e6e;
                   }
-                  &-item a {
-                     text-decoration: none;
-                  }
-
                   &-item:hover a {
                      text-decoration: underline;
                   }
-
                   &-item:active a {
                      text-decoration: none;
                   }
@@ -312,7 +302,6 @@ body {
       display: block;
       width: 360px;
       position: relative;
-      text-decoration: none;
       box-sizing: border-box;
       &:hover .products-item-btn {
          display: flex;
@@ -411,33 +400,29 @@ body {
       width: 100%;
       align-items: center;
       justify-content: center;
-      a {
+      .products-btn {
          display: block;
-         text-decoration: none;
-         .products-btn {
-            display: block;
-            width: 211px;
-            padding: 15px;
-            background-color: $pink;
+         width: 211px;
+         padding: 15px;
+         background-color: $pink;
+         border: 2px solid $pink;
+         box-sizing: border-box;
+         font-style: normal;
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 19px;
+         text-align: center;
+         word-break: break-all;
+         color: $white;
+         &:hover {
+            background-color: $white;
             border: 2px solid $pink;
-            box-sizing: border-box;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 19px;
-            text-align: center;
-            word-break: break-all;
-            color: $white;
-            &:hover {
-               background-color: $white;
-               border: 2px solid $pink;
-               color: $pink;
-            }
-            &:active {
-               background-color: $white;
-               border: 2px solid $pink;
-               color: $activ-color;
-            }
+            color: $pink;
+         }
+         &:active {
+            background-color: $white;
+            border: 2px solid $pink;
+            color: $activ-color;
          }
       }
    }
@@ -644,14 +629,17 @@ body {
          svg {
             fill: $black;
          }
-         &:hover svg {
-            fill: $pink;
-         }
-         &:active {
+         &:hover {
             background-color: $pink;
          }
-         &:active svg {
+         &:hover svg {
             fill: $white;
+         }
+         &:nth-child(2) {
+            background-color: $pink;
+            svg {
+               fill: $white;
+            }
          }
       }
    }
