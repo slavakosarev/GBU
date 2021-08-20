@@ -30,13 +30,3 @@ CSS
 Возможно ли такое реализовать? Чтобы при включении одного iput отключался
 другой,а меню сразу скрывалось.
 ```
-
-```
-HTML
-
-<ul class="breadcrumbs-list">
-	<li class="breadcrumbs-list-link"><a class="link" href="#"> home /</a></li>
-	<li class="breadcrumbs-list-link"><a class="link" href="#"> men /</a></li>
-	<li class="breadcrumbs-list-link"><a class="link" href="#"> new arrivals</a></li>
-</ul>
-```
