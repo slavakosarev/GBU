@@ -12,15 +12,21 @@ input:focus-visible {
 }
 body {
    font-family: "Lato", sans-serif;
+   font-style: normal;
    color: $black;
    background-color: $white;
 }
 a {
    text-decoration: none;
+   cursor: pointer;
+}
+button {
+   word-break: break-all;
 }
 .container {
    margin: 0 auto;
    max-width: $width;
+   padding: 0;
 }
 
 /*==========Header==========*/
@@ -117,7 +123,7 @@ a {
             display: none;
          }
          #menu-switch:checked ~ .menu-list {
-            visibility: visible;
+            display: block;
          }
          // не работает
          &-btn {
@@ -160,12 +166,12 @@ a {
             }
          }
          &-list {
-            visibility: hidden;
+            display: none;
             width: 232px;
             min-height: $height-block-snd;
             padding: 16px 33px;
             box-sizing: border-box;
-            background-color: #f7e4e2;
+            background-color: $white;
             list-style: none;
             position: absolute;
             top: 75px;
@@ -216,7 +222,6 @@ a {
             .menu-title > a,
             .menu-list-items > a,
             .menu-list-items__sublist-item > a {
-               font-style: normal;
                font-size: 14px;
                line-height: 17px;
                font-weight: normal;
@@ -271,6 +276,7 @@ a {
          }
       }
       .cart-btn {
+         cursor: pointer;
          svg {
             display: block;
             width: 32px;
@@ -283,6 +289,23 @@ a {
             fill: $activ-color;
          }
       }
+   }
+}
+.heading {
+   height: $height;
+   background: #f8f3f4;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   &-title {
+      display: block;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 29px;
+      color: $pink;
+      text-transform: uppercase;
+      margin: 0 0 0 230px;
    }
 }
 
@@ -407,7 +430,6 @@ a {
          background-color: $pink;
          border: 2px solid $pink;
          box-sizing: border-box;
-         font-style: normal;
          font-weight: 400;
          font-size: 16px;
          line-height: 19px;
@@ -460,7 +482,6 @@ a {
          display: block;
          width: 100%;
          margin: 0 0 16px 0;
-         font-style: normal;
          font-weight: 400;
          font-size: 20px;
          line-height: 24px;
@@ -468,7 +489,6 @@ a {
          text-align: center;
       }
       &-txt {
-         font-style: normal;
          font-weight: 300;
          font-size: 14px;
          line-height: 17px;
@@ -516,7 +536,6 @@ a {
          background-repeat: no-repeat;
       }
       &-txt {
-         font-style: normal;
          font-weight: 400;
          font-size: 20px;
          line-height: 24px;
@@ -534,7 +553,6 @@ a {
          color: $black;
          text-align: center;
          text-transform: uppercase;
-         font-style: normal;
       }
       .subscribe-form-title {
          display: block;
@@ -563,7 +581,6 @@ a {
             border: none;
             border-radius: 20px 0 0 20px;
             background-color: #e1e1e1;
-            font-style: normal;
             font-weight: 400;
             font-size: 14px;
             line-height: 16, 8px;
@@ -577,7 +594,6 @@ a {
             border: none;
             border-radius: 0 20px 20px 0;
             background-color: $pink;
-            font-style: normal;
             font-weight: 400;
             font-size: 14px;
             line-height: 16, 8px;
@@ -608,7 +624,6 @@ a {
    box-sizing: border-box;
    background-color: $black;
    &-txt {
-      font-style: normal;
       font-weight: 400;
       font-size: 16px;
       line-height: 19px;
