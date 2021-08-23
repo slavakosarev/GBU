@@ -352,6 +352,7 @@ button {
   display: block;
   width: 29px;
   height: 29px;
+  fill: #fff;
 }
 
 .page-header__btn-wrp .cart-btn {
@@ -362,6 +363,7 @@ button {
   display: block;
   width: 32px;
   height: 29px;
+  fill: #fff;
 }
 
 .page-header__btn-wrp .cart-btn:hover svg {

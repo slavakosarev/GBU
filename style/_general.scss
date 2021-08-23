@@ -273,6 +273,7 @@ button {
             display: block;
             width: 29px;
             height: 29px;
+            fill: $white;
          }
       }
       .cart-btn {
@@ -281,6 +282,7 @@ button {
             display: block;
             width: 32px;
             height: 29px;
+            fill: $white;
          }
          &:hover svg {
             fill: $pink;
