@@ -24,8 +24,9 @@ button {
    word-break: break-all;
 }
 .container {
-   margin: 0 auto;
+   width: 100%;
    max-width: $width;
+   margin: 0 auto;
    padding: 0;
 }
 
@@ -514,7 +515,7 @@ button {
    padding: 20px;
    margin: 0 auto;
    box-sizing: border-box;
-   background-image: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(/img/background.png);
+   background-image: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(../img/background.png);
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
@@ -531,7 +532,7 @@ button {
          width: 96px;
          height: 96px;
          margin: 0 0 30px 0;
-         background-image: url(/img/avatar.png);
+         background-image: url(../img/avatar.png);
          background-size: 100%;
          background-position: center -10px;
          border-radius: 50%;

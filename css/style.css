@@ -30,8 +30,9 @@ button {
 }
 
 .container {
-  margin: 0 auto;
+  width: 100%;
   max-width: 1600px;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -682,8 +683,8 @@ button {
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(244, 244, 244, 0.7)), to(rgba(244, 244, 244, 0.7))), url(/img/background.png);
-  background-image: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(/img/background.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(244, 244, 244, 0.7)), to(rgba(244, 244, 244, 0.7))), url(../img/background.png);
+  background-image: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(../img/background.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -711,7 +712,7 @@ button {
   width: 96px;
   height: 96px;
   margin: 0 0 30px 0;
-  background-image: url(/img/avatar.png);
+  background-image: url(../img/avatar.png);
   background-size: 100%;
   background-position: center -10px;
   border-radius: 50%;
@@ -915,7 +916,7 @@ button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #f1e4e6;
-  background-image: url(/img/figure_man.png);
+  background-image: url(../img/figure_man.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom left;
@@ -1008,26 +1009,26 @@ button {
 }
 
 .page-main .page-main-wrp .categories-item:nth-child(1) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url(/img/woman.png);
-  background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(/img/woman.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url(../img/woman.png);
+  background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/woman.png);
 }
 
 .page-main .page-main-wrp .categories-item:nth-child(2) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url(/img/man.png);
-  background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(/img/man.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url(../img/man.png);
+  background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/man.png);
 }
 
 .page-main .page-main-wrp .categories-item:nth-child(3) {
   margin: 0 0 30px 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url(/img/kid.png);
-  background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(/img/kid.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url(../img/kid.png);
+  background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/kid.png);
 }
 
 .page-main .page-main-wrp .categories-item:last-child {
   width: 100%;
   margin: 0 0 30px 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url(/img/colage.png);
-  background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(/img/colage.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url(../img/colage.png);
+  background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/colage.png);
 }
 
 .page-main .page-main-wrp .categories-item-title, .page-main .page-main-wrp .categories-item-subtitle {
@@ -1800,7 +1801,7 @@ button {
 
 .page-product .carousel-wrp #carouselExampleFade .carousel-control-next {
   right: -58%;
-  background-image: url(/img/right-arrow.svg);
+  background-image: url(../img/right-arrow.svg);
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: right;
@@ -1813,7 +1814,7 @@ button {
 
 .page-product .carousel-wrp #carouselExampleFade .carousel-control-prev {
   left: -58%;
-  background-image: url(/img/left-arrow.svg);
+  background-image: url(../img/left-arrow.svg);
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: left;
@@ -2384,7 +2385,7 @@ button {
   background: #f16d7f;
   padding: 16px 60px 16px 29px;
   border: none;
-  background-image: url(/img/arrow.svg);
+  background-image: url(../img/arrow.svg);
   background-repeat: no-repeat;
   background-position-x: 119px;
   background-position-y: 18px;
@@ -2409,7 +2410,7 @@ button {
 }
 
 .page-registration .registration-wrp .conditions ul {
-  list-style-image: url(/img/done.svg);
+  list-style-image: url(../img/done.svg);
   padding: 0;
 }
 
