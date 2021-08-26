@@ -38,7 +38,8 @@ p, button {
 
 /*==========Header==========*/
 .page-header {
-  max-width: 100%;
+  max-width: 1600px;
+  width: 100%;
   min-height: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,22 +57,6 @@ p, button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
-}
-
-.page-header button {
-  display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  fill: #fff;
 }
 
 .page-header__search-wrp {
@@ -899,12 +884,14 @@ p, button {
 /*==========Page Main==========*/
 .page-main {
   width: 100%;
+  margin: 0 auto;
 }
 
 .page-main-banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 1600px;
   width: 100%;
   min-height: 764px;
   -webkit-box-pack: end;
@@ -920,6 +907,7 @@ p, button {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom left;
+  margin: 0 0 65px 0;
 }
 
 .page-main-banner:hover {
@@ -976,16 +964,16 @@ p, button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  margin: 65px auto 0 auto;
+  margin: 0 auto 96px auto;
 }
 
 .page-main .page-main-wrp .categories-item {
@@ -1027,7 +1015,7 @@ p, button {
 
 .page-main .page-main-wrp .categories-item:last-child {
   width: 100%;
-  margin: 0 0 30px 0;
+  margin: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url(../img/colage.png);
   background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/colage.png);
 }
@@ -1056,7 +1044,7 @@ p, button {
 .page-main .products-header {
   display: block;
   text-align: center;
-  margin: 66px 0 48px 0;
+  margin: 0 0 48px 0;
   width: 100%;
   text-align: center;
   font-weight: normal;
@@ -1780,6 +1768,7 @@ p, button {
 
 .page-product .carousel-wrp {
   max-width: 1600px;
+  width: 100%;
   min-height: 777px;
   background: #f7f7f7;
   border: 1px solid #eaeaea;
@@ -1800,43 +1789,45 @@ p, button {
           align-items: center;
 }
 
-.page-product .carousel-wrp #carouselExampleFade {
+.page-product .carousel-wrp .carousel {
   width: 597px;
+  height: 724px;
+  position: relative;
+}
+
+.page-product .carousel-wrp .carousel .image-size {
   height: 724px;
 }
 
-.page-product .carousel-wrp #carouselExampleFade .carousel-inner {
-  height: 100%;
+.page-product .carousel-wrp .carousel .prev {
+  position: absolute;
+  left: -75%;
+  top: 46%;
+  border: none;
 }
 
-.page-product .carousel-wrp #carouselExampleFade .carousel-inner .carousel-item > img {
-  width: 100%;
+.page-product .carousel-wrp .carousel .prev svg {
+  fill: #222224;
 }
 
-.page-product .carousel-wrp #carouselExampleFade .carousel-control-next {
-  right: -58%;
-  background-image: url(../img/right-arrow.svg);
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: right;
-  background-size: 22px;
+.page-product .carousel-wrp .carousel .next {
+  position: absolute;
+  right: -75%;
+  top: 46%;
+  border: none;
 }
 
-.page-product .carousel-wrp #carouselExampleFade .carousel-control-next span {
-  display: none;
+.page-product .carousel-wrp .carousel .next svg {
+  fill: #f16d7f;
 }
 
-.page-product .carousel-wrp #carouselExampleFade .carousel-control-prev {
-  left: -58%;
-  background-image: url(../img/left-arrow.svg);
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: left;
-  background-size: 22px;
+.page-product .carousel-wrp .carousel button:hover {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
 }
 
-.page-product .carousel-wrp #carouselExampleFade .carousel-control-prev span {
-  display: none;
+.page-product .carousel-wrp .carousel button:active svg {
+  fill: #fff;
 }
 
 .page-product .product-card-wrp {
@@ -2435,6 +2426,7 @@ p, button {
 }
 
 /*==========Adaptive tablet==========*/
+/*==========Page Main==========*/
 @media (max-width: 768px) {
   .page-header {
     padding: 0 32px;
@@ -2464,8 +2456,7 @@ p, button {
     font-size: 24px;
   }
   .page-main .page-main-wrp .categories {
-    margin: 20px auto 0 auto;
-    padding: 0 5px 0 5px;
+    padding: 0 8px 0 8px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
