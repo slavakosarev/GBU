@@ -14,7 +14,7 @@ body {
    font-family: "Lato", sans-serif;
    font-style: normal;
    color: $black;
-   background-color: $white;
+   background-color: $out-bkgd;
 }
 a {
    text-decoration: none;
@@ -36,32 +36,25 @@ p , button {
    max-width: $width;
    width: 100%;
    min-height: $height75;
+   margin: 0 auto;
    display: flex;
    align-items: center;
-   justify-content: space-between;
+   justify-content: center;
    background: $black;
    flex-wrap: wrap;
    padding: 15px 0;
    box-sizing: border-box;
    position: relative;
-   // &-wrp {
-   //    max-width: $wrp;
-   //    width: 100%;
-      
-   // }
-   // a {
-   //    display: block;
-   //    box-sizing: border-box;
-   //    display: flex;
-   //    align-items: flex-end;
-   //    padding: 0;
-   //    background-color: transparent;
-   //    border: none;
-   //    fill: $white;
-   // }
-   &__search-wrp {
+   &-wrp {
+      max-width: $wrp;
+      width: 100%;
       display: flex;
-      margin-left: 231px;
+      align-items: center;
+      justify-content: space-between;
+   }
+   &__search {
+      display: flex;
+      justify-content: space-between;
       .logo {
          margin: 0 41px 0 0;
          display: block;
@@ -120,13 +113,11 @@ p , button {
          }
       }
    }
-   &__btn-wrp {
+   &__btn {
       display: flex;
-      margin-right: 231px;
-      // использовать calc при подсчете margin
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
-      .menu {
+      &-menu {
          #menu-switch {
             display: none;
          }
@@ -134,13 +125,14 @@ p , button {
             display: block;
          }
          // не работает
-         &-btn {
+         .menu-burger {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 32px;
             height: 32px;
             margin-right: 33px;
+            cursor: pointer;
             &:hover span,
             &:hover span::before,
             &:hover span::after {
@@ -173,7 +165,7 @@ p , button {
                top: 10px;
             }
          }
-         &-list {
+         .menu-list {
             display: none;
             width: 232px;
             min-height: $height764;
@@ -227,13 +219,6 @@ p , button {
                color: $black;
                text-transform: uppercase;
             }
-            .menu-title > a,
-            .menu-list-items > a,
-            .menu-list-items__sublist-item > a {
-               font-size: 14px;
-               line-height: 17px;
-               font-weight: normal;
-            }
             &-items > a {
                display: block;
                margin: 0 0 11px 0;
@@ -267,8 +252,14 @@ p , button {
                }
             }
          }
+         &-items > a,
+         &-items__sublist-item > a {
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: normal;
+         }
       }
-      .account-btn {
+      &-account {
          margin-right: 33px;
          align-items: flex-end;
          &:hover svg {
@@ -284,7 +275,7 @@ p , button {
             fill: $white;
          }
       }
-      .cart-btn {
+      &-cart {
          cursor: pointer;
          svg {
             display: block;
@@ -463,9 +454,9 @@ p , button {
 /*==========Feachers==========*/
 .features {
    display: flex;
-   justify-content: center;
    align-items: center;
-   flex-wrap: wrap;
+   justify-content: center;
+   margin: 0 auto;
    width: 100%;
    max-width: $width;
    min-height: 341px;
@@ -473,13 +464,20 @@ p , button {
    margin: 95px auto 0 auto;
    background-color: $black;
    box-sizing: border-box;
+   &-wrp {
+      max-width: $wrp;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+   }
    &-item {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
       width: 300px;
-      margin: 0 90px 0 0;
       &-item:nth-child(4n-1) {
          margin: 0;
       }
@@ -514,8 +512,6 @@ p , button {
    display: flex;
    justify-content: center;
    align-items: center;
-   flex-wrap: wrap;
-   align-items: center;
    max-width: $width;
    width: 100%;
    min-height: 448px;
@@ -527,6 +523,14 @@ p , button {
    background-position: center;
    background-repeat: no-repeat;
    background-color: $white;
+   &-wrp {
+      max-width: $wrp;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+   }
    &-info {
       display: flex;
       margin: 0 340px 0 0;
@@ -551,6 +555,7 @@ p , button {
          line-height: 24px;
          text-align: center;
          color: $black;
+         word-break: break-word;
          span {
             font-style: italic;
          }
@@ -558,81 +563,88 @@ p , button {
    }
    &-form-wrp {
       width: 355px;
-      .subscribe-form-title,
-      .subscribe-form-subtitle {
-         color: $black;
-         text-align: center;
-         text-transform: uppercase;
-      }
-      .subscribe-form-title {
-         display: block;
-         margin: 0 0 10px 0;
-         font-weight: 700;
-         font-size: 24px;
-         line-height: 40, 13px;
-      }
-      .subscribe-form-subtitle {
-         display: block;
-         margin: 0 0 32px 0;
-         font-weight: 400;
-         font-size: 18px;
-         line-height: 30, 1px;
-      }
-      .subscribe-form {
+   }
+   &-title,
+   &-subtitle {
+      color: $black;
+      text-align: center;
+      text-transform: uppercase;
+   }
+   &-title {
+      display: block;
+      margin: 0 0 10px 0;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 40, 13px;
+   }
+   &-subtitle {
+      display: block;
+      margin: 0 0 32px 0;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30, 1px;
+   }
+   &-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 356px;
+      &-email {
          display: flex;
-         justify-content: center;
          align-items: center;
-         width: 356px;
-         &-email {
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-            border: none;
-            border-radius: 20px 0 0 20px;
-            background-color: #e1e1e1;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 17px;
-            color: $black;
-            opacity: 0.67;
+         padding: 20px;
+         box-sizing: border-box;
+         border: none;
+         border-radius: 25px 0 0 25px;
+         background-color: #e1e1e1;
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 17px;
+         color: $black;
+         opacity: 0.67;
+      }
+      &-btn {
+         display: block;
+         padding: 20px;
+         box-sizing: border-box;
+         border: none;
+         border-radius: 0 25px 25px 0;
+         background-color: $pink;
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 17px;
+         display: flex;
+         align-items: center;
+         text-align: center;
+         color: $white;
+         &:hover {
+            background-color: $white;
+            color: $pink;
          }
-         &-btn {
-            display: block;
-            padding: 20px;
-            box-sizing: border-box;
-            border: none;
-            border-radius: 0 20px 20px 0;
+         &:active {
             background-color: $pink;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 17px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: $white;
-            &:hover {
-               background-color: $white;
-               color: $pink;
-            }
-            &:active {
-               background-color: $pink;
-               color: $pink;
-            }
+            color: $pink;
          }
       }
    }
 }
 .page-footer {
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
    align-items: center;
    width: 100%;
    max-width: 1600px;
    min-height: 79px;
-   padding: 20px 235px;
+   margin: 0 auto;
    box-sizing: border-box;
    background-color: $black;
+   &-wrp {
+      max-width: $wrp;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
    &-txt {
       font-weight: 400;
       font-size: 16px;

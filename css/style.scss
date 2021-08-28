@@ -6,6 +6,7 @@
 .page-main {
    width: 100%;
    margin: 0 auto;
+   background-color: $white;
    &-banner {
       display: flex;
       max-width: $width;
@@ -13,111 +14,120 @@
       min-height: $height764;
       justify-content: flex-end;
       align-items: center;
-      box-sizing: border-box;
       background-color: #f1e4e6;
-      background-image: url(../img/figure_man.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: bottom left;
       margin: 0 0 65px 0;
       &:hover {
          filter: brightness(50%);
       }
-      .banner-cap {
-         max-width: 377px;
-         width:100%;
-         margin: 0 331px 90px 0;
+      &-wrp{
+         display: flex;
+         align-self: stretch;
+         max-width: $wrp;
+         width: 100%;
+         margin: 0 auto;
+         box-sizing: border-box;
+         background-image: url(../img/figure_man.png);
+         background-repeat: no-repeat;
+         background-size: contain;
+         background-position: -66%;
+         justify-content: flex-end;
+      }
+      &-cap {
          text-transform: uppercase;
-         position: relative;
-         :before {
-            content: "";
-            display: block;
-            width: 12px;
-            height: 92px;
-            background-color: $pink;
-            position: absolute;
-            top: 0;
-            left: -28px;
-         }
-         &-title {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         padding: 0 100px 100px;
+         align-self: center;
+         &__title {
             margin: 0;
             display: block;
-            width: 100%;
             font-weight: 900;
             font-size: 48px;
             line-height: 58px;
             color: $black;
          }
-         &-subtitle {
+         &__subtitle {
             display: block;
             font-weight: 700;
             font-size: 32px;
             line-height: 38.4px;
+            position: relative;
+            :before {
+               content: "";
+               display: block;
+               width: 12px;
+               height: 92px;
+               background-color: $pink;
+               position: absolute;
+               top: -55px;
+               left: -30px;
+            }
             span {
                color: $pink;
             }
          }
       }
+      
    }
-   .page-main-wrp {
+   &-wrp {
       max-width: $wrp;
       margin: 0 auto;
-      .categories {
+   }
+   .categories {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0 auto 96px auto;
+      &-item {
          display: flex;
-         justify-content: space-between;
-         align-items: flex-start;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
          flex-wrap: wrap;
-         width: 100%;
-         margin: 0 auto 96px auto;
-         &-item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            flex-wrap: wrap;
-            width: 360px;
-            min-height: 260px;
-            margin: 0 30px 30px 0;
-            background-size: cover;
-            background-position: center;
-            &:nth-child(1) {
-               background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/woman.png);
-            }
-            &:nth-child(2) {
-               background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/man.png);
-            }
-            &:nth-child(3) {
-               margin: 0 0 30px 0;
-               background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/kid.png);
-            }
-            &:last-child {
-               width: 100%;
-               margin: 0;
-               background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/colage.png);
-            }
-            &-title,
-            &-subtitle {
-               display: block;
-               width: 100%;
-               text-transform: uppercase;
-               text-align: center;
-            }
-            &-title {
-               font-weight: 700;
-               font-size: 24px;
-               line-height: 28px;
-               color: $pink;
-            }
-            &-subtitle {
-               font-weight: 400;
-               font-size: 16px;
-               line-height: 19px;
-               color: $white;
-            }
+         width: 360px;
+         min-height: 260px;
+         margin: 0 30px 30px 0;
+         background-size: cover;
+         background-position: center;
+         &:nth-child(1) {
+            background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/woman.png);
+         }
+         &:nth-child(2) {
+            background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/man.png);
+         }
+         &:nth-child(3) {
+            margin: 0 0 30px 0;
+            background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/kid.png);
+         }
+         &:last-child {
+            width: 100%;
+            margin: 0;
+            background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/colage.png);
+         }
+         &-title,
+         &-subtitle {
+            display: block;
+            width: 100%;
+            text-transform: uppercase;
+            text-align: center;
+         }
+         &-title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: $pink;
+         }
+         &-subtitle {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: $white;
          }
       }
    }
-
    .products-header {
       display: block;
       text-align: center;
@@ -1167,51 +1177,52 @@
       padding: 0 32px;
       box-sizing: border-box;
    }
-   .page-header__search-wrp {
-      margin: 0;
-   }
-   .page-header__btn-wrp {
-      margin: 0;
-   }
    .page-main-banner {
       min-height: 367px;
-      
    }
-   .page-main-banner .banner-cap {
+   .page-main-banner-wrp {
+      background-position: 0;
+   }
+   .page-main-banner-cap {
       width: 43%;
-      margin: 0 0 0 0;
       padding: 0 33px 0 0;
       box-sizing: border-box;
    }
-   .page-main-banner .banner-cap-title {
+   .page-main-banner-cap__title {
       font-size: 44px;
+      line-height: 52.8px;
    }
-   .page-main-banner .banner-cap-subtitle {
+   .page-main-banner-cap__subtitle {
       font-size: 24px;
+      line-height: 28.8px;
    }
-   .page-main .page-main-wrp .categories {
-      padding: 0 8px 0 8px;
+   .page-main .categories {
+      padding: 0 10px;
       box-sizing: border-box;
    }
-   .page-main .page-main-wrp .categories-item {
+   .page-main .categories-item {
       width: 232px;
       min-height: 167px;
-      margin: 0 19px 19px 0;
+      margin: 0 17px 19px 0;
    }
-   .page-main .page-main-wrp .categories-item:last-child {
+   .page-main .categories-item:last-child {
       margin: 0;
    }
-   .page-main .page-main-wrp .categories-item:nth-child(3) {
+   .page-main .categories-item:nth-child(3) {
       margin: 0 0 19px 0;
    }
    .products {
       padding: 0 10px;
       box-sizing: border-box;
    }
-   .features {
+   .products-btn-wrp {
+      margin: 13px auto 0 auto;
+   }
+   .features-wrp {
       flex-direction: column;
       padding: 64px 20px 64px 20px;
       box-sizing: border-box;
+      margin: 65px auto 0 auto;
    }
    .features-item {
       margin: 0 auto 48px auto;
@@ -1225,10 +1236,16 @@
       background-color: #f3f3f3;
       background-position: 26% 77px;
    }
+   .subscribe-wrp {
+      flex-direction: column;
+   }
    .subscribe-info {
       margin: 0 auto 80px auto;
    }
+   .subscribe-form-wrp {
+      margin: 0 auto;
+   }
    .page-footer {
-         padding: 30px 32px;
+      padding: 20px 32px;
    }
 }
