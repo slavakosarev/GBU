@@ -16,6 +16,7 @@
 <body>
 
    <div class="container">
+
       <header class="page-header">
          <div class="page-header-wrp">
             <div class="page-header__search">
@@ -126,24 +127,29 @@
          </div>
       </header>
 
-      <main class="page-catalog">
-
-         <section class="page-catalog-nav">
+      <section class="page-catalog-nav">
+         <div class="page-catalog-nav-wrp">
             <h3 class="page-catalog-nav-cap">new arrivals</h3>
             <div class="page-catalog-nav-breadcrumbs">
                <ul class="breadcrumbs-list">
-                  <li class="breadcrumbs-list-link"><a class="link" href="index.html">home<span
-                           class="slash-first"></span></a></li>
-                  <li class="breadcrumbs-list-link"><a class="link" href="#">men<span class="slash-second"></span></a>
+                  <li class="breadcrumbs-list__item">
+                     <a class="breadcrumbs-list__item-link" href="index.html">home<span class="slash-first"></span></a>
                   </li>
-                  <li class="breadcrumbs-list-link"><a class="link"> new arrivals</a></li>
+                  <li class="breadcrumbs-list__item">
+                     <a class="breadcrumbs-list__item-link" href="#">men<span class="slash-second"></span></a>
+                  </li>
+                  <li class="breadcrumbs-list__item">
+                     <a class="breadcrumbs-list__item-link"> new arrivals</a>
+                  </li>
                </ul>
             </div>
-         </section>
+         </div>
+      </section>
 
-         <div class="catalog-wrp">
-            <section class="catalog-control">
-               <div class="catalog-control-filter">
+      <main class="page-catalog">
+         <div class="page-catalog-wrp">
+            <section class="page-catalog-control">
+               <div class="page-catalog-control__filter">
                   <input type="checkbox" id="switch-filter">
                   <label class="filter-btn" for="switch-filter">
                      <span>filter</span>
@@ -154,38 +160,38 @@
                   </label>
                   <ul class="filter-list">
                      <li class="filter-list-item"><a href="#">category</a></li>
-                     <ul class="filter-sublist">
-                        <li class="filter-sublist-item">
+                     <ul class="filter-list-sublist">
+                        <li class="filter-list-sublist__item">
                            <a href="#">Accessories</a>
                         </li>
-                        <li class="filter-sublist-item">
+                        <li class="filter-list-sublist__item">
                            <a href="#">Bags</a>
                         </li>
-                        <li class="filter-sublist-item">
+                        <li class="filter-list-sublist__item">
                            <a href="#">Denim</a>
                         </li>
-                        <li class="filter-sublist-item">
+                        <li class="filter-list-sublist__item">
                            <a href="#">Hoodies &amp;&nbsp;Sweatshirts</a>
                         </li>
-                        <li class="filter-sublist-item">
+                        <li class="filter-list-sublist__item">
                            <a href="#">Jackets &amp;&nbsp;Coats</a>
                         </li>
-                        <li class="filter-sublist-item">
+                        <li class="filter-list-sublist__item">
                            <a href="#">Polos</a>
                         </li>
-                        <li class="filter-sublist-item">
+                        <li class="filter-list-sublist__item">
                            <a href="#">Shirts</a>
                         </li>
-                        <li class="filter-sublist-item">
+                        <li class="filter-list-sublist__item">
                            <a href="#">Shoes</a>
                         </li>
-                        <li class="filter-sublist-item">
+                        <li class="filter-list-sublist__item">
                            <a href="#">Sweaters &amp;&nbsp;Knits</a>
                         </li>
-                        <li class="filter-sublist-item">
+                        <li class="filter-list-sublist__item">
                            <a href="#">T-Shirts</a>
                         </li>
-                        <li class="filter-sublist-item">
+                        <li class="filter-list-sublist__item">
                            <a href="#">Tanks</a>
                         </li>
                      </ul>
@@ -193,7 +199,7 @@
                      <li class="filter-list-item"><a href="#">designer</a></li>
                   </ul>
                </div>
-               <div class="catalog-control-sort">
+               <div class="page-catalog-control__sort">
                   <div class="link-trend">
                      <span>trending now</span>
                      <svg width="11" height="6" viewBox="0 0 11 6" xmlns="http://www.w3.org/2000/svg">

@@ -22,7 +22,7 @@
       <header class="page-header">
          <div class="page-header-wrp">
             <div class="page-header__search">
-               <a href="#" class="logo">
+               <a href="index.html" class="logo">
                   <img src="img/logo.svg" alt="Logo" width="44" height="38">
                </a>
                <form action="#" class="search-form">
@@ -129,70 +129,66 @@
          </div>
       </header>
 
-      <main class="page-shopping">
+      <section class="heading">
+         <div class="heading-wrp">
+            <h3 class="heading-title">shopping cart</h3>
+         </div>
+      </section>
 
-         <section>
-            <div class="heading">
-               <h3 class="heading-title">shopping-cart</h3>
-            </div>
-         </section>
-         <section>
-            <div class="cart-wrp">
-               <div class="cart-list">
-
-                  <article class="cart-list-item">
-                     <div class="cart-list-item-img"><img src="img/article-3.png" alt="product"></div>
-                     <div class="cart-list-item-desc">
-                        <h3>mango people t-shirt</h3>
-                        <ul class="desc-box">
-                           <li>Price:<span>$300</span></li>
-                           <li>Color: Red</li>
-                           <li>Size: Xl</li>
-                           <li>Quantity:</li>
-                        </ul>
-                        <input type="text" placeholder="2">
-                     </div>
-                  </article>
-
-                  <article class="cart-list-item">
-                     <div class="cart-list-item-img"><img src="img/catalog-art-2.png" alt="product"></div>
-                     <div class="cart-list-item-desc">
-                        <h3>mango people t-shirt</h3>
-                        <ul class="desc-box">
-                           <li>Price:<span>$300</span></li>
-                           <li>Color: Red</li>
-                           <li>Size: Xl</li>
-                           <li>Quantity:</li>
-                        </ul>
-                        <input type="text" placeholder="2">
-                     </div>
-                  </article>
-
-                  <div class="cart-list-btn">
-                     <button class="cart-list-btn-clear">clear shopping cart</button>
-                     <button class="cart-list-btn-cont">continue shopping</button>
+      <section class="page-cart">
+         <div class=" page-cart-wrp">
+            <div class="page-cart-list">
+               <article class="page-cart-list__item">
+                  <div class="page-cart-list__item-img"><img src="img/article-3.png" alt="product"></div>
+                  <div class="page-cart-list__item-desc">
+                     <h3>mango people t-shirt</h3>
+                     <ul class="desc-box">
+                        <li>Price:<span>$300</span></li>
+                        <li>Color: Red</li>
+                        <li>Size: Xl</li>
+                        <li>Quantity:</li>
+                     </ul>
+                     <input type="text" placeholder="2">
                   </div>
-               </div>
+               </article>
 
-               <div class="shipping">
-                  <h6>shipping address</h6>
-                  <form action="#" class="shipping-form">
-                     <input type="text" placeholder="Bangladesh">
-                     <input type="text" placeholder="State">
-                     <input type="text" placeholder="Postcode / Zip">
-                     <button>get a quote</button>
-                  </form>
-                  <div class="checkout">
-                     <h6>sub total<span>$900</span></h6>
-                     <h4>garand total<span>$900</span></h4>
-                     <hr>
-                     <a href="registration.html">proceed to checkout</a>
+               <article class="page-cart-list__item">
+                  <div class="page-cart-list__item-img"><img src="img/catalog-art-2.png" alt="product"></div>
+                  <div class="page-cart-list__item-desc">
+                     <h3>mango people t-shirt</h3>
+                     <ul class="desc-box">
+                        <li>Price:<span>$300</span></li>
+                        <li>Color: Red</li>
+                        <li>Size: Xl</li>
+                        <li>Quantity:</li>
+                     </ul>
+                     <input type="text" placeholder="2">
                   </div>
+               </article>
+
+               <div class="page-cart-list__btn">
+                  <button>clear shopping cart</button>
+                  <button>continue shopping</button>
                </div>
             </div>
-         </section>
 
-      </main>
+            <div class="page-cart-shipping">
+               <h6>shipping address</h6>
+               <form action="#" class="page-cart-shipping__form">
+                  <input type="text" placeholder="Bangladesh">
+                  <input type="text" placeholder="State">
+                  <input type="text" placeholder="Postcode / Zip">
+                  <button>get a quote</button>
+               </form>
+               <div class="page-cart-shipping__checkout">
+                  <h6>sub total<span>$900</span></h6>
+                  <h4>garand total<span>$900</span></h4>
+                  <hr>
+                  <a href="registration.html">proceed to checkout</a>
+               </div>
+            </div>
+
+      </section>
 
       <footer>
          <section class="subscribe">
@@ -250,4 +246,5 @@
       </footer>
 
    </div>
+
 </body>
