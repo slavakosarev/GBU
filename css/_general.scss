@@ -117,6 +117,7 @@ p , button {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
       &-menu {
          #menu-switch {
             display: none;
@@ -282,7 +283,6 @@ p , button {
             width: 32px;
             height: 29px;
             fill: $white;
-            position: relative;
          }
          .number {
             display: block;
@@ -290,8 +290,8 @@ p , button {
             height: 37px;
             fill: $white;
             position: absolute;
-            top: 18px;
-            right: 188px;
+            top: -2px;
+            right: -3px;
          }
          &:hover svg {
             fill: $pink;
@@ -592,14 +592,14 @@ p , button {
       margin: 0 0 10px 0;
       font-weight: 700;
       font-size: 24px;
-      line-height: 40, 13px;
+      line-height: 40.13px;
    }
    &-subtitle {
       display: block;
       margin: 0 0 32px 0;
       font-weight: 400;
       font-size: 18px;
-      line-height: 30, 1px;
+      line-height: 30.1px;
    }
    &-form {
       display: flex;
