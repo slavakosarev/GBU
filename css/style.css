@@ -57,7 +57,6 @@ p, button {
   padding: 15px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  position: relative;
 }
 
 .page-header-wrp {
@@ -72,6 +71,7 @@ p, button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
 }
 
 .page-header__search {
@@ -120,8 +120,8 @@ p, button {
   text-transform: capitalize;
   background-color: transparent;
   position: absolute;
-  top: 20px;
-  left: 355px;
+  top: 8px;
+  left: 123px;
 }
 
 .page-header__search .input-search:hover {
@@ -166,7 +166,6 @@ p, button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
 .page-header__btn-menu #menu-switch {
@@ -239,8 +238,8 @@ p, button {
   background-color: #fff;
   list-style: none;
   position: absolute;
-  top: 75px;
-  right: 0;
+  top: 58px;
+  right: -17%;
   z-index: 20;
   -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
           box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
@@ -2589,6 +2588,10 @@ p, button {
     padding: 0 32px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+  }
+  .page-header__btn-menu .menu-list {
+    right: -5%;
+    min-height: 630px;
   }
   .page-main-banner {
     min-height: 367px;

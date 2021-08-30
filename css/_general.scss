@@ -44,13 +44,13 @@ p , button {
    flex-wrap: wrap;
    padding: 15px 0;
    box-sizing: border-box;
-   position: relative;
    &-wrp {
       max-width: $wrp;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      position: relative;
    }
    &__search {
       display: flex;
@@ -84,8 +84,8 @@ p , button {
          text-transform: capitalize;
          background-color: transparent;
          position: absolute;
-         top: 20px;
-         left: 355px;
+         top: 8px;
+         left: 123px;
          &:hover {
             visibility: visible;
          }
@@ -117,7 +117,6 @@ p , button {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative;
       &-menu {
          #menu-switch {
             display: none;
@@ -125,7 +124,6 @@ p , button {
          #menu-switch:checked ~ .menu-list {
             display: block;
          }
-         // не работает
          .menu-burger {
             display: flex;
             justify-content: center;
@@ -175,8 +173,8 @@ p , button {
             background-color: $white;
             list-style: none;
             position: absolute;
-            top: 75px;
-            right: 0;
+            top: 58px;
+            right: -17%;  
             z-index: 20;
             box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
             &-close-btn {
