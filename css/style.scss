@@ -1204,6 +1204,7 @@
    }
    .page-main-banner {
       min-height: 367px;
+      margin: 0 0 20px 0;
    }
    .page-main-banner-wrp {
       background-position: 0;
@@ -1250,7 +1251,6 @@
       flex-direction: column;
       padding: 64px 20px 64px 20px;
       box-sizing: border-box;
-      margin: 65px auto 0 auto;
    }
    .features-item {
       margin: 0 auto 48px auto;
@@ -1379,3 +1379,105 @@
       line-height: 19px;
    }
 }
+
+/*==========Adaptive mobile==========*/
+/*==========Page Main==========*/
+
+@media (max-width: 376px) {
+   .page-header {
+      padding: 0 16px;
+   }
+   .page-header__btn-account, .page-header__btn-cart {
+      display: none;
+   }
+   .page-header__btn-menu .menu-burger {
+      margin: 0;
+   }
+   .page-main-banner-wrp {
+      background-image: none;
+      justify-content: center;
+   }
+   .page-main-banner-cap {
+      padding: 0 0 0 26px;
+      width: 70%;
+   }
+   .page-main-banner-cap__title {
+      font-size: 38px;
+      line-height: 46px;
+   }
+   .page-main-banner-cap__subtitle {
+      font-size: 20px;
+      line-height: 24px;
+   }
+   .page-main-banner-cap__subtitle :before {
+      height: 61px;
+      top: -43px;
+      left: -25px;
+   }
+   .page-main .categories {
+      justify-content: center;
+      margin: 0 auto 64px auto;
+   }
+   .page-main .categories-item {
+      margin: 0 0 32px 0;
+      width: 343px;
+      height: 247px;
+   }
+   .products {
+      justify-content: center;
+   }
+   .products-btn-wrp {
+      margin: 21px auto 0 auto;
+   }
+   .features {
+      margin: 96px auto 0 auto;
+      padding: 0 8px;
+   }
+   .features-wrp {
+      padding: 48px 20px 81px 20px;
+   }
+   .features-item {
+      margin: 0 auto 46px auto;
+   }
+   .subscribe {
+      padding: 64px 20px 110px 20px;
+      background-size: 476%;
+      background-position: 26% 77px;
+   }
+   .subscribe-wrp {
+      justify-content: center;
+   }
+   .subscribe-info {
+      justify-content: center;
+      margin: 0 0 60px 0;
+      width: 100%;
+   }
+   .subscribe-info-txt {
+      font-size: 18px;
+      line-height: 22px;
+   }
+   .subscribe-form-wrp {
+      width: 100%;
+      margin: 0;
+   }
+   .subscribe-subtitle {
+      margin: 0 0 22px 0;
+      font-size: 14px;
+      line-height: 21.45px;
+   }
+   .subscribe-form {
+      width: 100%;
+   }
+   .subscribe-form-email, .subscribe-form-btn {
+      padding: 20px 30px;
+   }
+   .page-footer {
+      padding: 0 20px 9px;
+   }
+   .page-footer-wrp {
+      flex-direction: column-reverse;
+   }
+   .page-footer-socials {
+      padding: 40px;
+   }
+}  
