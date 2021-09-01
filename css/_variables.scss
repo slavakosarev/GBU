@@ -9,3 +9,18 @@ $height75: 75px;
 $height148: 148px;
 $height764: 764px;
 $out-bkgd: #e5e5e5;
+
+@mixin breakpoint($point) {
+   @if $point == lg {
+      @media (max-width: 992px) {@content;}
+   }
+   @else if $point == md {
+      @media (max-width: 768px) {@content;}
+   }
+   @else if $point == sm {
+      @media (max-width: 576px) {@content;}
+   }
+   @else if $point == xs {
+      @media (max-width: 376px) {@content;}
+   }
+}

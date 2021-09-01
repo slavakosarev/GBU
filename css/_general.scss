@@ -132,16 +132,6 @@ p , button {
             height: 32px;
             margin-right: 33px;
             cursor: pointer;
-            &:hover span,
-            &:hover span::before,
-            &:hover span::after {
-               background-color: $pink;
-            }
-            &:active span,
-            &:active span::before,
-            &:active span::after {
-               background-color: $activ-color;
-            }
             span {
                display: block;
                width: 100%;
@@ -163,6 +153,16 @@ p , button {
             span::after {
                top: 10px;
             }
+            &:hover span,
+            &:hover span::before,
+            &:hover span::after {
+               background-color: $pink;
+            }
+            &:active span,
+            &:active span::before,
+            &:active span::after {
+               background-color: $activ-color;
+            }
          }
          .menu-list {
             display: none;
@@ -175,7 +175,7 @@ p , button {
             position: absolute;
             top: 58px;
             right: -17%;  
-            z-index: 20;
+            z-index: 21;
             box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
             &-close-btn {
                display: block;
@@ -300,6 +300,29 @@ p , button {
       }
    }
 }
+@include breakpoint(md) {
+   
+   .page-header {
+      padding: 0 32px;
+      box-sizing: border-box;
+   }
+   .page-header__btn-menu .menu-list {
+      right: -4%;
+      min-height: 630px;
+   }
+}
+@include breakpoint(xs) {
+   
+   .page-header {
+      padding: 0 16px;
+   }
+   .page-header__btn-account, .page-header__btn-cart {
+      display: none;
+   }
+   .page-header__btn-menu .menu-burger {
+      margin: 0;
+   }
+}
 .heading {
    max-width: $width;
    width: 100%;
@@ -337,11 +360,13 @@ p , button {
    width: 100%;
    max-width: 1140px;
    margin: 0 auto;
+   background-color: $white;
    &-item {
       display: block;
       width: 360px;
       position: relative;
       box-sizing: border-box;
+      background-color: #F8F8F8;
       &:hover .products-item-btn {
          display: flex;
       }
@@ -434,7 +459,7 @@ p , button {
       }
    }
    &-btn-wrp {
-      margin-top: 28px;
+      margin: 28px auto 0;
       display: flex;
       width: 100%;
       align-items: center;
@@ -465,7 +490,31 @@ p , button {
       }
    }
 }
+@include breakpoint(md) {
+   
+   .products {
+      padding: 0 8px;
+      box-sizing: border-box;
+   }
+   .products-btn-wrp {
+      margin: 13px auto 0;
+   }
+}
+@include breakpoint(xs) {
 
+   .products {
+      justify-content: center;
+   }
+   .products-item {
+      margin-bottom: 16px;
+   }
+   .products-item-photo {
+      width: 100%;
+   }
+   .products-btn-wrp {
+      margin: 24px auto 33px;
+   }
+}
 /*==========Feachers==========*/
 .features {
    display: flex;
@@ -518,6 +567,34 @@ p , button {
          text-align: center;
          color: $white;
       }
+   }
+}
+@include breakpoint(md) {
+   .features {
+      margin: 63px auto 0;
+   }
+   .features-wrp {
+      flex-direction: column;
+      padding: 64px 20px 64px 20px;
+      box-sizing: border-box;
+   }
+   .features-item {
+      margin: 0 auto 48px;
+   }
+   .features-item:last-child {
+      margin: 0;
+   }
+}
+@include breakpoint(xs) {
+
+   .features {
+      padding: 0;
+   }
+   .features-wrp {
+      padding: 48px 16px 81px;
+   }
+   .features-item {
+      margin: 0 auto 46px;
    }
 }
 
@@ -643,6 +720,67 @@ p , button {
       }
    }
 }
+@include breakpoint(md) {
+   .subscribe {
+      padding: 64px 20px 140px 20px;
+      background-size: 298%;
+      background-color: #f3f3f3;
+      background-position: 26% 77px;
+   }
+   .subscribe-wrp {
+      flex-direction: column;
+   }
+   .subscribe-info {
+      margin: 0 auto 80px;
+   }
+   .subscribe-form-wrp {
+      margin: 0 auto;
+   }
+   .subscribe-subtitle {
+      margin: 0 0 27px 0;
+   }
+}
+@include breakpoint(xs) {
+
+   .subscribe {
+      padding: 64px 16px 110px;
+      background-size: 476%;
+      background-position: 26% 77px;
+   }
+   .subscribe-wrp {
+      justify-content: center;
+   }
+   .subscribe-info {
+      justify-content: center;
+      margin: 0 0 60px 0;
+      width: 100%;
+   }
+   .subscribe-info-txt {
+      font-size: 18px;
+      line-height: 22px;
+   }
+   .subscribe-form-wrp {
+      width: 100%;
+      margin: 0;
+   }
+   .subscribe-subtitle {
+      margin: 0 0 22px 0;
+      font-size: 14px;
+      line-height: 21.45px;
+   }
+   .subscribe-form {
+      width: 100%;
+   }
+   .subscribe-form-email, .subscribe-form-btn {
+      padding: 4% 6%;
+   }
+   .subscribe-form-email {
+      width: 70%;
+   }
+   .subscribe-form-btn {
+      width: 30%;
+   }
+}
 .page-footer {
    display: flex;
    justify-content: center;
@@ -695,5 +833,23 @@ p , button {
             }
          }
       }
+   }
+}
+@include breakpoint(md) {
+   .page-footer {
+      padding: 20px 32px;
+   }
+}
+@include breakpoint(xs) {
+
+   .page-footer {
+      padding: 0 16px 9px;
+   }
+   .page-footer-wrp {
+      flex-direction: column-reverse;
+   }
+   .page-footer-socials {
+      padding: 40px;
+      box-sizing: content-box;
    }
 }
