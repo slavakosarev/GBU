@@ -347,6 +347,11 @@ p , button {
       text-transform: uppercase;
    }
 }
+@include breakpoint(md) {
+   .heading {
+      padding: 0 16px;
+   }
+}
 @include breakpoint(xs) {
    .heading-wrp {
       justify-content: center;
@@ -730,7 +735,7 @@ p , button {
       padding: 64px 20px 140px 20px;
       background-size: 298%;
       background-color: #f3f3f3;
-      background-position: 26% 77px;
+      background-position: 26% 91px;
    }
    .subscribe-wrp {
       flex-direction: column;
@@ -750,7 +755,7 @@ p , button {
    .subscribe {
       padding: 64px 16px 110px;
       background-size: 476%;
-      background-position: 26% 77px;
+      background-position: 25% 100%;
    }
    .subscribe-wrp {
       justify-content: center;

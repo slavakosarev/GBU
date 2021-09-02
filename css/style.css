@@ -448,6 +448,12 @@ p, button {
   text-transform: uppercase;
 }
 
+@media (max-width: 768px) {
+  .heading {
+    padding: 0 16px;
+  }
+}
+
 @media (max-width: 376px) {
   .heading-wrp {
     -webkit-box-pack: center;
@@ -973,7 +979,7 @@ p, button {
     padding: 64px 20px 140px 20px;
     background-size: 298%;
     background-color: #f3f3f3;
-    background-position: 26% 77px;
+    background-position: 26% 91px;
   }
   .subscribe-wrp {
     -webkit-box-orient: vertical;
@@ -996,7 +1002,7 @@ p, button {
   .subscribe {
     padding: 64px 16px 110px;
     background-size: 476%;
-    background-position: 26% 77px;
+    background-position: 25% 100%;
   }
   .subscribe-wrp {
     -webkit-box-pack: center;
@@ -2347,7 +2353,6 @@ p, button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
 }
 
 .page-cart-list__item {
@@ -2394,8 +2399,8 @@ p, button {
   margin: 0;
   padding: 0;
   position: relative;
-  left: 122%;
-  top: 12%;
+  left: 119%;
+  top: 11%;
 }
 
 .page-cart-list__item-desc .desc-close-btn::before, .page-cart-list__item-desc .desc-close-btn::after {
@@ -2644,9 +2649,15 @@ p, button {
 .page-cart-shipping__checkout a:hover {
   color: #f16d7f;
   background: #fff;
-  border: 1px solid #f16d7f;
+  outline: 1px solid #f16d7f;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.page-cart-shipping__checkout a:active {
+  color: #535353;
+  background: #fff;
+  outline: 1px solid #535353;
 }
 
 /*==========Page Registration==========*/
@@ -2760,6 +2771,20 @@ p, button {
   background-repeat: no-repeat;
   background-position-x: 119px;
   background-position-y: 18px;
+}
+
+.registration-form button:hover {
+  background: #fff;
+  outline: 1px solid #f16d7f;
+  color: #f16d7f;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.registration-form button:active {
+  color: #535353;
+  background: #fff;
+  outline: 1px solid #535353;
 }
 
 .registration-conditions {
@@ -2893,15 +2918,15 @@ p, button {
     display: none;
   }
   /*==========Page Cart==========*/
-  .heading {
-    padding: 0 16px;
-  }
   .page-cart-wrp {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 59px 16px 0;
+  }
+  .page-cart-list {
+    width: 100%;
   }
   .page-cart-list__item {
     width: 100%;
@@ -2912,9 +2937,22 @@ p, button {
   .page-cart-list__item-desc {
     width: 64%;
   }
+  .page-cart-list__item-desc .desc-box > li {
+    padding-bottom: 6px;
+  }
+  .page-cart-list__item-desc .desc-box > li:last-of-type {
+    padding: 0;
+  }
   .page-cart-list__item-desc .desc-close-btn {
     left: 115%;
-    top: 18%;
+    top: 5%;
+  }
+  .page-cart-list__item-desc h3 {
+    margin: 0 40% 18% 0;
+  }
+  .page-cart-list__item-desc input {
+    top: 77%;
+    left: 31%;
   }
   .page-cart-list__item:last-of-type {
     margin: 0 0 62px 0;
@@ -2949,6 +2987,8 @@ p, button {
   /*==========Page Registration==========*/
   .registration-wrp {
     padding: 40px 16px 96px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .registration-conditions {
     max-width: 354px;
@@ -3227,6 +3267,34 @@ p, button {
   }
   .page-cart-shipping__checkout a {
     padding: 16px 20px;
+  }
+  /*==========Page Registration==========*/
+  .registration-wrp {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 40px 8px 0;
+    margin-bottom: 56px;
+  }
+  .registration-form {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .registration-form__input:nth-of-type(2) {
+    margin-bottom: 30px;
+  }
+  .registration-form label {
+    margin: 0 20px 20px 0;
+  }
+  .registration-form label:nth-of-type(1) {
+    margin-bottom: 20px;
+  }
+  .registration-form__radio {
+    padding-bottom: 13px;
+  }
+  .registration-conditions h3 {
+    margin: 0 0 32px 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
