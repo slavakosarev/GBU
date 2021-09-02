@@ -347,6 +347,11 @@ p , button {
       text-transform: uppercase;
    }
 }
+@include breakpoint(xs) {
+   .heading-wrp {
+      justify-content: center;
+   }
+}
 
 /*==========Main==========*/
 
