@@ -296,6 +296,13 @@ p , button {
          &:active svg {
             fill: $activ-color;
          }
+         span {
+            position: absolute;
+            color: $white;
+            top: -2px;
+            right: 4px;
+            font-size: 12px;
+         }
       }
    }
 }

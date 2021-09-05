@@ -876,6 +876,9 @@
                position: relative;
                left: 120%;
                top: 6%;
+               // svg:hover {
+               //    fill: $pink;
+               // }
                &::before,
                &::after {
                   content: "";
