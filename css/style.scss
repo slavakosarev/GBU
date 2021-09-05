@@ -29,7 +29,7 @@
          background-image: url(../img/figure_man.png);
          background-repeat: no-repeat;
          background-size: contain;
-         background-position: -66%;
+         background-position: -68%;
          justify-content: flex-end;
       }
       &-cap {
@@ -37,21 +37,17 @@
          display: flex;
          flex-direction: column;
          align-items: flex-start;
-         padding: 0 100px 100px;
+         padding: 0 104px 89px;
          align-self: center;
          &__title {
             margin: 0;
             display: block;
-            font-weight: 900;
-            font-size: 48px;
-            line-height: 58px;
             color: $black;
+            @include text (900, 48px, 58px);
          }
          &__subtitle {
             display: block;
-            font-weight: 700;
-            font-size: 32px;
-            line-height: 38.4px;
+            @include text (700, 32px, 38.4px);
             position: relative;
             :before {
                content: "";
@@ -104,6 +100,7 @@
          }
          &:last-child {
             width: 100%;
+            min-height: 180px;
             margin: 0;
             background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/colage.png);
          }
@@ -115,15 +112,11 @@
             text-align: center;
          }
          &-title {
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 28px;
+            @include text (700, 24px, 28px);
             color: $pink;
          }
          &-subtitle {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 19px;
+            @include text ($line-height: 19px);
             color: $white;
          }
       }
@@ -134,15 +127,12 @@
       margin: 0 0 48px 0;
       width: 100%;
       text-align: center;
-      font-weight: normal;
       &-title {
-         font-size: 30px;
-         line-height: 36px;
+         @include text (400, 30px, 36px);
          margin: 0 0 6px 0;
       }
       &-text {
-         font-size: 14px;
-         line-height: 17px;
+         @include text;
          color: #9f9f9f;
       }
    }
@@ -170,11 +160,10 @@
    }
    &-cap {
       display: block;
-      font-weight: normal;
-      font-size: 24px;
-      line-height: 29px;
+      @include text (400, 24px, 29px);
       color: $pink;
       text-transform: uppercase;
+      margin: 0;
    }
    &-breadcrumbs {
       display: block;
@@ -188,6 +177,7 @@
       text-transform: uppercase;
       position: relative;
       padding: 0;
+      margin: 0;
       li+li::before {
          content: "/\00a0";
       }
@@ -197,9 +187,7 @@
       }
       &__item {
          text-decoration: none;
-         font-weight: 300;
-         font-size: 14px;
-         line-height: 17px;
+         @include text ($weight: 300);
          &-link {
             text-decoration: none;
             color: $grey;
@@ -229,10 +217,10 @@
       display: flex;
       width: 100%;
       align-items: flex-start;
-      padding: 51px 0 64px 0;
+      padding: 51px 0 32px 0;
       &__filter {
          width: 360px;
-         padding: 13px 16px 16px 16px;
+         padding: 0 16px 16px 16px;
          box-sizing: border-box;
          position: relative;
          #switch-filter {
@@ -252,9 +240,7 @@
          color: $black;
          text-align: left;
          span {
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 17px;
+            @include text ($weight: 600);
             text-transform: uppercase;
          }
          svg {
@@ -286,9 +272,7 @@
             margin: 0 0 18px 0;
             padding: 11px;
             box-sizing: border-box;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 17px;
+            @include text;
             border-bottom: 1px solid #ebebeb;
             position: relative;
          }
@@ -326,9 +310,7 @@
             list-style: none;
             &__item {
                margin: 0 0 11px 0;
-               font-weight: normal;
-               font-size: 14px;
-               line-height: 16.8px;
+               @include text;
             }
             &__item:last-child {
                margin: 0 0 24px 0;
@@ -352,15 +334,13 @@
          width: 360px;
          justify-content: space-between;
          align-items: flex-start;
-         padding: 13px 16px 16px 16px;
+         padding: 0 16px 16px 16px;
          box-sizing: border-box;
       }
       .link-trend,
       .sort-price,
       .list-size {
-         font-weight: normal;
-         font-size: 14px;
-         line-height: 16.8px;
+         @include text;
          color: $grey;
          background-color: transparent;
          text-align: left;
@@ -449,9 +429,7 @@
             position: relative;
             text-transform: uppercase;
             font-family: Roboto;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 16.41px;
+            @include text;
             color: $grey;
             &:before {
                content: "";
@@ -564,22 +542,18 @@
             display: block;
             margin: 0 0 12px 0;
             text-transform: uppercase;
-            font-size: 13px;
-            line-height: 16px;
+            @include text;
             color: $black;
          }
          &-txt {
             margin: 0 0 18px 0;
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 17px;
+            @include text ($weight: 300);
             color: #5d5d5d;
          }
          &-price {
             display: block;
             margin: 0;
-            font-size: 16px;
-            line-height: 19px;
+            @include text ($line-height: 19px);
             color: $pink;
          }
          &-btn {
@@ -592,8 +566,7 @@
             border: 1px solid $white;
             background: transparent;
             text-align: center;
-            font-size: 14px;
-            line-height: 17px;
+            @include text;
             color: $white;
             position: absolute;
             top: 30%;
@@ -608,7 +581,7 @@
    .pagination {
       display: flex;
       width: 100%;
-      margin: 49px 0 0 0;
+      margin: 20px 0 0 0;
       justify-content: center;
       align-items: center;
       background-color: $white;
@@ -627,7 +600,7 @@
       }
       &-list {
          display: flex;
-         justify-content: space-evenly;
+         justify-content: space-between;
          align-items: center;
          width: 283px;
          list-style-type: none;
@@ -641,9 +614,7 @@
          &__item {
             display: inline;
             &-link {
-               font-weight: 300;
-               font-size: 16px;
-               line-height: 19px;
+               @include text (300, 16px, 19px);
                color: #ebebeb;
             }
             &-link:hover {
@@ -714,7 +685,7 @@
       .prev {
          position: absolute;
          left: 0;
-         top: 46%;
+         top: 47%;
          border: none;
          z-index: 11;
          svg {
@@ -724,7 +695,7 @@
       .next {
          position: absolute;
          right: 0;
-         top: 46%;
+         top: 47%;
          border: none;
          z-index: 11;
          svg {
@@ -765,9 +736,7 @@
       z-index: 10;
       &__name {
          display: block;
-         font-weight: 300;
-         font-size: 14px;
-         line-height: 17px;
+         @include text ($weight: 300);
          color: $pink;
          text-transform: uppercase;
          padding: 12px;
@@ -784,9 +753,7 @@
          }
       }
       &__title {
-         font-weight: 300;
-         font-size: 18px;
-         line-height: 22px;
+         @include text (300, 18px, 22px);
          color: #4d4d4d;
          text-transform: uppercase;
          margin: 0 0 48px;
@@ -794,17 +761,13 @@
       &__txt {
          max-width: 555px;
          min-height: 52px;
-         font-weight: 300;
-         font-size: 14px;
-         line-height: 17px;
+         @include text ($weight: 300);
          text-align: center;
          color: #5e5e5e;
          margin: 0 0 32px;
       }
       &__price {
-         font-weight: 300;
-         font-size: 24px;
-         line-height: 29px;
+         @include text (300, 24px, 29px);
          color: $pink;
       }
       &__line {
@@ -817,9 +780,7 @@
          display: flex;
          justify-content: space-between;
          align-items: baseline;
-         font-weight: normal;
-         font-size: 14px;
-         line-height: 17px;
+         @include text;
          color: #6f6e6e;
          text-transform: uppercase;
          width: 373px;
@@ -835,8 +796,7 @@
          border: 1px solid #ff6a6a;
          background: transparent;
          text-align: center;
-         font-size: 14px;
-         line-height: 17px;
+         @include text;
          color: $pink;
          margin: 48px 0 25px 0;
          svg {
@@ -851,9 +811,7 @@
             border: 1px solid $activ-color;
          }
          span {
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 19px;
+            @include text ($line-height: 19px);
             color: $pink;
             &:hover {
                font-weight: bold;
@@ -908,7 +866,6 @@
             justify-content: space-between;
             width: 60%;
             padding: 22px 97px 62px 31px;
-            font-weight: normal;
             position: relative;
             .desc-close-btn {
                display: block;
@@ -917,8 +874,8 @@
                margin: 0;
                padding: 0;
                position: relative;
-               left: 119%;
-               top: 11%;
+               left: 120%;
+               top: 6%;
                &::before,
                &::after {
                   content: "";
@@ -945,19 +902,20 @@
                }
             }  
             h3 {
-               font-size: 24px;
-               line-height: 29px;
+               @include text (400, 24px, 29px);
                text-transform: uppercase;
                word-wrap: break-word;
                margin: 0 52px 42px 0;
             }
             .desc-box {
                list-style-type: none;
-               font-size: 22px;
-               line-height: 26px;
+               @include text (400, 22px, 26px);
                color: #575757;
                padding: 0;
                margin: 0;
+               li {
+                  margin: 0 0 6px;
+               }
                li > span {
                   color: $pink;
                }
@@ -967,7 +925,7 @@
                width: 44px;
                padding: 1px 15px;
                top: 219px;
-               left: 145px;
+               left: 152px;
             }
          }
       }
@@ -981,9 +939,7 @@
             padding: 16px 40px;
             border: 1px solid #a4a4a4;
             background-color: $white;
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 17px;
+            @include text ($weight: 300);
             text-transform: uppercase;
             &:hover {
                border: 1px solid $pink;
@@ -1003,9 +959,7 @@
       width: 360px;
       padding: 17px 0 0 0;
       h6 {
-         font-weight: 300;
-         font-size: 16px;
-         line-height: 19px;
+         @include text (300, 16px, 19px);
          text-transform: uppercase;
          margin: 0 0 21px;
       }
@@ -1017,11 +971,9 @@
          margin: 0 0 58px 0;
          input {
             width: 100%;
-            padding: 13px 0 16px 17px;
-            margin-bottom: 21px;
-            font-weight: 300;
-            font-size: 13px;
-            line-height: 16px;
+            padding: 13px 0 16px 15px;
+            margin-bottom: 17px;
+            @include text (300, 16px, 19px);
             border: 1px solid #a4a4a4;
             &::placeholder {
                color: $black;
@@ -1056,18 +1008,17 @@
          padding: 39px 36px 42px 52px;
          background: #f5f3f3;
          box-sizing: border-box;
+         span {
+            padding: 0 0 0 12px;
+         }
          h6 {
-            font-weight: normal;
-            font-size: 11px;
-            line-height: 13px;
+            @include text (300, 11px, 13px);
             color: #4a4a4a;
             text-align: end;
             margin: 0 0 12px;
          }
          h4 {
-            font-weight: 300;
-            font-size: 16px;
-            line-height: 19px;
+            @include text (300, 16px, 19px);
             text-transform: uppercase;
             text-align: end;
             margin: 0 0 21px;
@@ -1085,9 +1036,7 @@
             display: block;
             text-decoration: none;
             padding: 16px 38px;
-            font-weight: 300;
-            font-size: 16px;
-            line-height: 19px;
+            @include text (300, 16px, 19px);
             color: $white;
             text-transform: uppercase;
             background: $pink;
@@ -1097,6 +1046,7 @@
             &:hover {
                color: $pink;
                background: $white;
+               transition: background-color 650ms ease;
                outline: 1px solid $pink;
                box-sizing: border-box;
             }
@@ -1129,13 +1079,11 @@
    &-form {
       display: block;
       width: 360px;
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 19px;
+      @include text (300, 16px, 19px);
       label {
-         margin: 0 0 20px;
-         &:nth-of-type(1) {
-            margin: 0 20px 33px 0;
+         margin: 0 20px 25px 0;
+         &:nth-of-type(3) {
+            visibility: hidden;
          }
       }
       &__input {
@@ -1149,29 +1097,31 @@
             line-height: 16px;
             color: #B1B1B1;
          }
+         &:nth-of-type(2) {
+            margin-bottom: 24px;
+         }
       }
       &__radio {
-         font-size: 11px;
-         line-height: 13px;
+         @include text (300, 11px, 13px);
          label {
             display: inline-flex;
+         }
+         input {
+            width: 17px;
+            height: 17px;
          }
          span {
             padding-left: 10px;
          }
-      } 
+      }
       &__requirement {
          max-width: 360px;
-         font-weight: 300;
-         font-size: 13px;
-         line-height: 16px;
+         @include text (300, 13px, 16px);
          color: #B1B1B1;
          margin: 0 0 39px;
       }
       button {
-         font-weight: normal;
-         font-size: 14px;
-         line-height: 17px;
+         @include text;
          color: $white;
          text-transform: uppercase;
          background: $pink;
@@ -1183,6 +1133,7 @@
          background-position-y: 18px;
          &:hover {
             background: $white;
+            transition: background-color 650ms ease;
             outline: 1px solid $pink;
             color: $pink;
             box-sizing: border-box;
@@ -1198,11 +1149,11 @@
       max-width: 652px;
       min-height: 334px;
       display: block;
-      font-weight: 300;
-      font-size: 24px;
-      line-height: 29px;
+      @include text (300, 24px, 29px);
       word-break: break-all;
       h3 {
+         @include text (300, 24px, 29px);
+         word-break: break-all;
          text-transform: uppercase;
          margin: 0 0 22px 0;
       }
@@ -1258,6 +1209,7 @@
    }
    .page-main .categories-item:last-child {
       margin: 0;
+      min-height: 116px;
    }
    .page-main .categories-item:nth-child(3) {
       margin: 0 0 19px 0;
@@ -1338,11 +1290,8 @@
    .page-cart-list__item-desc {
       width: 64%;
    }
-   .page-cart-list__item-desc .desc-box > li {
-      padding-bottom: 6px;
-   }
    .page-cart-list__item-desc .desc-box >li:last-of-type {
-      padding: 0;
+      margin: 0;
    }
    .page-cart-list__item-desc .desc-close-btn {
       left: 115%;
@@ -1380,6 +1329,9 @@
    .registration-wrp {
       padding: 40px 16px 96px;
       box-sizing: border-box;
+   }
+   .registration-form label:nth-of-type(3) {
+      visibility: visible;
    }
    .registration-conditions {
       max-width: 354px;
@@ -1426,6 +1378,9 @@
       width: 343px;
       height: 247px;
    }
+   .page-main .categories-item:last-child {
+      min-height: 111px;
+   }
  
    /*==========Page Catalog==========*/
    
@@ -1459,11 +1414,11 @@
    }
    .page-catalog-control__sort {
       width: 100%;
-      padding: 10px 8px 8px 45px;
+      padding: 10px 8px 8px 8px;
    }
    .page-catalog-control .link-trend, .page-catalog-control .sort-price, .page-catalog-control .list-size  {  
       font-size: 12px;
-      line-height: 14.4px;
+      line-height: 14px;
       margin: 0 0 15px 0;
    }
    .page-catalog-control .link-trend {
@@ -1595,7 +1550,7 @@
       margin: 0 27px 34px 0;
    }
    .page-cart-list__item-desc input {
-      top: 136px;
+      top: 154px;
       left: 120px;
       width: 24px;
       height: 15px;
@@ -1629,11 +1584,15 @@
       flex-direction: column;
       padding: 48px 0 0;
    }
+   .page-cart-shipping__form {
+      margin: 0 0 48px 0;
+   }
    .page-cart-shipping__form button {
       text-transform: capitalize;
    }
    .page-cart-shipping__checkout {
       padding: 39px 44px 42px;
+      margin-bottom: 96px;
    }
    .page-cart-shipping__checkout a {
       padding: 16px 20px;

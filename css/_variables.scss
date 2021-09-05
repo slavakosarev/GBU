@@ -24,3 +24,8 @@ $out-bkgd: #e5e5e5;
       @media (max-width: 376px) {@content;}
    }
 }
+@mixin text($weight: 400, $size: 14px, $line-height: 17px) {
+   font-weight: $weight;
+   font-size: $size;
+   line-height: $line-height; 
+}

@@ -116,7 +116,8 @@ p , button {
    &__btn {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-end;
+      padding: 0 9px;
       &-menu {
          #menu-switch {
             display: none;
@@ -253,9 +254,7 @@ p , button {
          }
          &-items > a,
          &-items__sublist-item > a {
-            font-size: 14px;
-            line-height: 17px;
-            font-weight: normal;
+            @include text;
          }
       }
       &-account {
@@ -345,6 +344,7 @@ p , button {
       line-height: 29px;
       color: $pink;
       text-transform: uppercase;
+      margin: 0;
    }
 }
 @include breakpoint(md) {
@@ -377,6 +377,7 @@ p , button {
       position: relative;
       box-sizing: border-box;
       background-color: #F8F8F8;
+      margin-bottom: 30px;
       &:hover .products-item-btn {
          display: flex;
       }
@@ -428,22 +429,18 @@ p , button {
          display: block;
          margin: 0 0 12px 0;
          text-transform: uppercase;
-         font-size: 13px;
-         line-height: 16px;
+         @include text (400, 13px, 16px);
          color: $black;
       }
       &-txt {
          margin: 0 0 18px 0;
-         font-weight: 300;
-         font-size: 14px;
-         line-height: 17px;
+         @include text ($weight: 300);
          color: #5d5d5d;
       }
       &-price {
          display: block;
          margin: 0;
-         font-size: 16px;
-         line-height: 19px;
+         @include text (400, 16px, 19px);
          color: $pink;
       }
       &-btn {
@@ -456,8 +453,7 @@ p , button {
          border: 1px solid $white;
          background: transparent;
          text-align: center;
-         font-size: 14px;
-         line-height: 17px;
+         @include text;
          color: $white;
          position: absolute;
          top: 30%;
@@ -469,7 +465,7 @@ p , button {
       }
    }
    &-btn-wrp {
-      margin: 28px auto 0;
+      margin: 12.5px auto 0;
       display: flex;
       width: 100%;
       align-items: center;
@@ -481,14 +477,13 @@ p , button {
          background-color: $pink;
          border: 2px solid $pink;
          box-sizing: border-box;
-         font-weight: 400;
-         font-size: 16px;
-         line-height: 19px;
+         @include text (400, 16px, 19px);
          text-align: center;
          word-break: break-all;
          color: $white;
          &:hover {
             background-color: $white;
+            transition: background-color 650ms ease;
             border: 2px solid $pink;
             color: $pink;
          }
@@ -503,7 +498,7 @@ p , button {
 @include breakpoint(md) {
    
    .products {
-      padding: 0 8px;
+      padding: 0 16px;
       box-sizing: border-box;
    }
    .products-btn-wrp {
@@ -514,6 +509,7 @@ p , button {
 
    .products {
       justify-content: center;
+      padding: 0 8px;
    }
    .products-item {
       margin-bottom: 16px;
@@ -551,7 +547,7 @@ p , button {
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      width: 300px;
+      width: 360px;
       &-item:nth-child(4n-1) {
          margin: 0;
       }
@@ -564,16 +560,12 @@ p , button {
          display: block;
          width: 100%;
          margin: 0 0 16px 0;
-         font-weight: 400;
-         font-size: 20px;
-         line-height: 24px;
+         @include text (400, 20px, 24px);
          color: $white;
          text-align: center;
       }
       &-txt {
-         font-weight: 300;
-         font-size: 14px;
-         line-height: 17px;
+         @include text ($weight: 300);
          text-align: center;
          color: $white;
       }
@@ -604,6 +596,7 @@ p , button {
       padding: 48px 16px 81px;
    }
    .features-item {
+      width: 100%;
       margin: 0 auto 46px;
    }
 }
@@ -635,7 +628,6 @@ p , button {
    }
    &-info {
       display: flex;
-      margin: 0 340px 0 0;
       justify-content: center;
       align-items: flex-start;
       flex-wrap: wrap;
@@ -644,27 +636,27 @@ p , button {
          display: block;
          width: 96px;
          height: 96px;
-         margin: 0 0 30px 0;
          background-image: url(../img/avatar.png);
          background-size: 100%;
-         background-position: center -10px;
+         background-position: center 0;
          border-radius: 50%;
          background-repeat: no-repeat;
+         padding: 5px 5px;
+         box-sizing: border-box;
       }
       &-txt {
-         font-weight: 400;
-         font-size: 20px;
-         line-height: 24px;
+         @include text (400, 20px, 24px);
          text-align: center;
          color: $black;
          word-break: break-word;
+         padding: 8% 0 18%;
          span {
             font-style: italic;
          }
       }
    }
    &-form-wrp {
-      width: 355px;
+      width: 360px;
    }
    &-title,
    &-subtitle {
@@ -674,53 +666,49 @@ p , button {
    }
    &-title {
       display: block;
-      margin: 0 0 10px 0;
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 40.13px;
+      margin: 12px 0 0;
+      @include text (700, 24px, 40px);
    }
    &-subtitle {
       display: block;
       margin: 0 0 32px 0;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 30.1px;
+      @include text (400, 18px, 30px);
    }
    &-form {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 356px;
+      width: 100%;
+      padding: 0 0 6%;
       &-email {
          display: flex;
          align-items: center;
-         padding: 20px;
+         width: 70%;
+         padding: 19px;
          box-sizing: border-box;
          border: none;
          border-radius: 25px 0 0 25px;
          background-color: #e1e1e1;
-         font-weight: 400;
-         font-size: 14px;
-         line-height: 17px;
+         @include text;
          color: $black;
          opacity: 0.67;
       }
       &-btn {
          display: block;
-         padding: 20px;
+         width: 30%;
+         padding: 19px;
          box-sizing: border-box;
          border: none;
          border-radius: 0 25px 25px 0;
          background-color: $pink;
-         font-weight: 400;
-         font-size: 14px;
-         line-height: 17px;
+         @include text;
          display: flex;
          align-items: center;
          text-align: center;
          color: $white;
          &:hover {
             background-color: $white;
+            transition: background-color 650ms ease;
             color: $pink;
          }
          &:active {
@@ -741,7 +729,7 @@ p , button {
       flex-direction: column;
    }
    .subscribe-info {
-      margin: 0 auto 80px;
+      margin: 0 auto;
    }
    .subscribe-form-wrp {
       margin: 0 auto;
@@ -762,16 +750,22 @@ p , button {
    }
    .subscribe-info {
       justify-content: center;
-      margin: 0 0 60px 0;
+      margin: 0 0 47px 0;
       width: 100%;
+   }
+   .subscribe-info-avatar {
+      width: 91px;
+      height: 91px;
    }
    .subscribe-info-txt {
       font-size: 18px;
       line-height: 22px;
+      padding: 8% 0 0;
    }
    .subscribe-form-wrp {
       width: 100%;
       margin: 0;
+      padding: 0;
    }
    .subscribe-subtitle {
       margin: 0 0 22px 0;
@@ -809,9 +803,7 @@ p , button {
       align-items: center;
    }
    &-txt {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 19px;
+      @include text (400, 16px, 19px);
       color: $white;
       margin: 0;
    }
