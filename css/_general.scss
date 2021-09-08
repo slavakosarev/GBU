@@ -175,7 +175,7 @@ p , button {
             list-style: none;
             position: absolute;
             top: 58px;
-            right: -17%;  
+            right: -188px;  
             z-index: 21;
             box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
             &-close-btn {
@@ -254,7 +254,7 @@ p , button {
          }
          &-items > a,
          &-items__sublist-item > a {
-            @include text;
+            @include text();
          }
       }
       &-account {
@@ -274,7 +274,6 @@ p , button {
          }
       }
       &-cart {
-         cursor: pointer;
          .cart {
             display: block;
             width: 32px;
@@ -283,12 +282,10 @@ p , button {
          }
          .number {
             display: block;
-            width: 42px;
-            height: 37px;
             fill: $white;
             position: absolute;
-            top: -2px;
-            right: -3px;
+            top: 2px;
+            right: 5px;
          }
          &:hover svg {
             fill: $pink;
@@ -299,9 +296,10 @@ p , button {
          span {
             position: absolute;
             color: $white;
-            top: -2px;
-            right: 4px;
+            top: 5px;
+            right: 12px;
             font-size: 12px;
+            line-height: 14px;
          }
       }
    }
@@ -337,6 +335,7 @@ p , button {
    display: flex;
    justify-content: center;
    margin: 0 auto;
+   box-sizing: border-box;
    &-wrp {
       max-width: $wrp;
       width: 100%;
@@ -460,7 +459,7 @@ p , button {
          border: 1px solid $white;
          background: transparent;
          text-align: center;
-         @include text;
+         @include text();
          color: $white;
          position: absolute;
          top: 30%;
@@ -696,7 +695,7 @@ p , button {
          border: none;
          border-radius: 25px 0 0 25px;
          background-color: #e1e1e1;
-         @include text;
+         @include text() ;
          color: $black;
          opacity: 0.67;
       }
@@ -708,7 +707,7 @@ p , button {
          border: none;
          border-radius: 0 25px 25px 0;
          background-color: $pink;
-         @include text;
+         @include text();
          display: flex;
          align-items: center;
          text-align: center;
