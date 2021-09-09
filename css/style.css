@@ -10,7 +10,9 @@ input:focus:not(:focus-visible) {
 
 *:focus-visible,
 input:focus-visible {
-  outline: 3px solid #f16d7f;
+  outline: none;
+  -webkit-box-shadow: 0 0 4px 3px #3e51f8;
+          box-shadow: 0 0 4px 3px #3e51f8;
 }
 
 body {
@@ -151,10 +153,6 @@ p, button {
 
 .page-header__search .search:active {
   fill: #535353;
-}
-
-.page-header__search .search:focus {
-  fill: #f16d7f;
 }
 
 .page-header__btn {

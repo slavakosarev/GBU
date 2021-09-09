@@ -8,7 +8,8 @@ input:focus:not(:focus-visible) {
 }
 *:focus-visible,
 input:focus-visible {
-   outline: 3px solid $pink;
+   outline: none;
+   box-shadow: 0 0 4px 3px rgb(62, 81, 248);
 }
 body {
    font-family: "Lato", sans-serif;
@@ -107,9 +108,6 @@ p , button {
          }
          &:active {
             fill: $activ-color;
-         }
-         &:focus {
-            fill: $pink;
          }
       }
    }
