@@ -132,6 +132,7 @@ p, button {
   width: 200px;
   min-height: 20px;
   -webkit-transition: width 1s ease;
+  -o-transition: width 1s ease;
   transition: width 1s ease;
   border: 2px solid #fff;
   background-color: #fff;
@@ -268,11 +269,13 @@ p, button {
   top: 5px;
   left: -3px;
   -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 .page-header__btn-menu .menu-list-close-btn::after {
   -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
@@ -660,6 +663,7 @@ p, button {
 .products-btn-wrp .products-btn:hover {
   background-color: #fff;
   -webkit-transition: background-color 650ms ease;
+  -o-transition: background-color 650ms ease;
   transition: background-color 650ms ease;
   border: 2px solid #f16d7f;
   color: #f16d7f;
@@ -835,6 +839,8 @@ p, button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(244, 244, 244, 0.7)), to(rgba(244, 244, 244, 0.7))), url(../img/background.png);
+  background-image: -webkit-linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(../img/background.png);
+  background-image: -o-linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(../img/background.png);
   background-image: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url(../img/background.png);
   background-size: cover;
   background-position: center;
@@ -987,6 +993,7 @@ p, button {
 .subscribe-form-btn:hover {
   background-color: #fff;
   -webkit-transition: background-color 650ms ease;
+  -o-transition: background-color 650ms ease;
   transition: background-color 650ms ease;
   color: #f16d7f;
 }
@@ -1325,17 +1332,23 @@ p, button {
 
 .page-main .categories-item:nth-child(1) {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url(../img/woman.png);
+  background-image: -webkit-linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/woman.png);
+  background-image: -o-linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/woman.png);
   background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/woman.png);
 }
 
 .page-main .categories-item:nth-child(2) {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url(../img/man.png);
+  background-image: -webkit-linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/man.png);
+  background-image: -o-linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/man.png);
   background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/man.png);
 }
 
 .page-main .categories-item:nth-child(3) {
   margin: 0 0 30px 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url(../img/kid.png);
+  background-image: -webkit-linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/kid.png);
+  background-image: -o-linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/kid.png);
   background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/kid.png);
 }
 
@@ -1344,6 +1357,8 @@ p, button {
   min-height: 180px;
   margin: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url(../img/colage.png);
+  background-image: -webkit-linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/colage.png);
+  background-image: -o-linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/colage.png);
   background-image: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url(../img/colage.png);
 }
 
@@ -2081,6 +2096,7 @@ p, button {
   right: 60%;
   top: 42%;
   -webkit-transform: rotate(-270deg);
+      -ms-transform: rotate(-270deg);
           transform: rotate(-270deg);
   z-index: 20;
 }
@@ -2090,17 +2106,20 @@ p, button {
   right: 39%;
   top: 42%;
   -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
           transform: rotate(270deg);
   z-index: 20;
 }
 
 .page-catalog .pagination .svg-link-right svg:hover {
   -webkit-transform: scale(1.5) rotate(270deg);
+      -ms-transform: scale(1.5) rotate(270deg);
           transform: scale(1.5) rotate(270deg);
 }
 
 .page-catalog .pagination .svg-link-left svg:hover {
   -webkit-transform: scale(1.5) rotate(-270deg);
+      -ms-transform: scale(1.5) rotate(-270deg);
           transform: scale(1.5) rotate(-270deg);
 }
 
@@ -2519,6 +2538,7 @@ p, button {
 .page-cart-list__btn button:hover {
   color: #f16d7f;
   -webkit-transition: color 650ms ease;
+  -o-transition: color 650ms ease;
   transition: color 650ms ease;
   border: 1px solid #f16d7f;
 }
@@ -2626,6 +2646,7 @@ p, button {
 .page-cart-shipping__form button:hover {
   color: #f16d7f;
   -webkit-transition: color 650ms ease;
+  -o-transition: color 650ms ease;
   transition: color 650ms ease;
   border-color: #f16d7f;
   -webkit-box-sizing: border-box;
@@ -2694,9 +2715,11 @@ p, button {
 .page-cart-shipping__checkout a:hover {
   color: #f16d7f;
   -webkit-transition: color 650ms ease;
+  -o-transition: color 650ms ease;
   transition: color 650ms ease;
   background: #fff;
   -webkit-transition: background 650ms ease;
+  -o-transition: background 650ms ease;
   transition: background 650ms ease;
   outline: 1px solid #f16d7f;
   -webkit-box-sizing: border-box;
@@ -2835,6 +2858,7 @@ p, button {
 .registration-form button:hover {
   background: #fff;
   -webkit-transition: background-color 650ms ease;
+  -o-transition: background-color 650ms ease;
   transition: background-color 650ms ease;
   outline: 1px solid #f16d7f;
   color: #f16d7f;
@@ -3381,4 +3405,3 @@ p, button {
     margin: 0 0 32px 0;
   }
 }
-/*# sourceMappingURL=style.css.map */
