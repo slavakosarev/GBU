@@ -769,12 +769,17 @@
       &__price {
          @include text (300, 24px, 29px);
          color: $pink;
+         margin: 0 0 65px;
       }
       &__line {
-         height: 1px;
-         width: 641px;
-         color: #cacaca;
-         margin: 65px 0;
+         margin: 0 0 65px;
+         &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 641px;
+            background-color: #cacaca;
+         }
       }
       &__sort {
          display: flex;
@@ -1286,10 +1291,6 @@
       padding: 53px 64px 40px;
       box-sizing: border-box;
    }
-   .page-product .product-card__txt {
-      padding: 0 45px 0;
-      box-sizing: border-box;
-   }
    .page-product .products .products-item:nth-of-type(3) {
       display: none;
    }
@@ -1522,9 +1523,14 @@
       line-height: 143.1%;
       padding: 0 5px 5px;
    }
+   .page-product .product-card__price {
+      margin: 0 0 32px;
+   }
    .page-product .product-card__line {
+      margin: 0 0 49px;
+   }
+   .page-product .product-card__line::after {
       width: 175px;
-      margin: 32px 0 49px;
    }
    .page-product .product-card {
       padding: 50px 25px 40px;
