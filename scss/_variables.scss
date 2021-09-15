@@ -1,0 +1,31 @@
+$black: #222224;
+$pink: #f16d7f;
+$white: #fff;
+$grey: #636363;
+$activ-color: #535353;
+$wrp: 1140px;
+$width: 1600px;
+$height75: 75px;
+$height148: 148px;
+$height764: 764px;
+$out-bkgd: #e5e5e5;
+
+@mixin breakpoint($point) {
+   @if $point == lg {
+      @media (max-width: 992px) {@content;}
+   }
+   @else if $point == md {
+      @media (max-width: 768px) {@content;}
+   }
+   @else if $point == sm {
+      @media (max-width: 576px) {@content;}
+   }
+   @else if $point == xs {
+      @media (max-width: 376px) {@content;}
+   }
+}
+@mixin text($weight: 400, $size: 14px, $line-height: 17px) {
+   font-weight: $weight;
+   font-size: $size;
+   line-height: $line-height; 
+}
