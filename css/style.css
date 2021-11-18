@@ -27,7 +27,8 @@ a {
   cursor: pointer;
 }
 
-p, button {
+p,
+button {
   word-break: break-all;
 }
 
@@ -166,6 +167,7 @@ p, button {
       -ms-flex-align: end;
           align-items: flex-end;
   padding: 0 9px;
+  position: relative;
 }
 
 .page-header__btn-menu #menu-switch {
@@ -392,6 +394,42 @@ p, button {
   line-height: 14px;
 }
 
+.page-header__btn .basket {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  top: 37px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.page-header__btn .hidden {
+  display: none;
+}
+
+.page-header__btn .basketRow {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 10px;
+}
+
+.page-header__btn .basketHeader {
+  font-weight: bold;
+}
+
+.page-header__btn .basketTotal {
+  font-weight: bold;
+  text-align: right;
+}
+
 @media (max-width: 768px) {
   .page-header {
     padding: 0 32px;
@@ -404,15 +442,25 @@ p, button {
   }
 }
 
+@media (max-width: 576px) {
+  .basket {
+    width: 500px;
+  }
+}
+
 @media (max-width: 376px) {
   .page-header {
     padding: 0 16px;
   }
-  .page-header__btn-account, .page-header__btn-cart {
+  .page-header__btn-account,
+  .page-header__btn-cart {
     display: none;
   }
   .page-header__btn-menu .menu-burger {
     margin: 0;
+  }
+  .basket {
+    font-size: 16px;
   }
 }
 
@@ -499,7 +547,7 @@ p, button {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   margin-bottom: 30px;
 }
 
@@ -1065,7 +1113,8 @@ p, button {
   .subscribe-form {
     width: 100%;
   }
-  .subscribe-form-email, .subscribe-form-btn {
+  .subscribe-form-email,
+  .subscribe-form-btn {
     padding: 4% 6%;
   }
   .subscribe-form-email {

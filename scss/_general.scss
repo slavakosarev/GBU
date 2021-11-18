@@ -21,7 +21,8 @@ a {
    text-decoration: none;
    cursor: pointer;
 }
-p , button {
+p,
+button {
    word-break: break-all;
 }
 .container {
@@ -116,6 +117,7 @@ p , button {
       justify-content: space-between;
       align-items: flex-end;
       padding: 0 9px;
+      position: relative;
       &-menu {
          #menu-switch {
             display: none;
@@ -173,7 +175,7 @@ p , button {
             list-style: none;
             position: absolute;
             top: 58px;
-            right: -188px;  
+            right: -188px;
             z-index: 21;
             box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
             &-close-btn {
@@ -300,10 +302,38 @@ p , button {
             line-height: 14px;
          }
       }
+      .basket {
+         position: absolute;
+         z-index: 3;
+         right: 0;
+         top: 37px;
+         background: white;
+         padding: 10px;
+         border: 1px solid #ebebeb;
+         border-radius: 3px;
+         font-size: 14px;
+      }
+      .hidden {
+         display: none;
+      }
+      .basketRow {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         gap: 10px;
+         margin-bottom: 10px;
+         border-bottom: 1px solid #ebebeb;
+         padding-bottom: 10px;
+      }
+      .basketHeader {
+         font-weight: bold;
+      }
+      .basketTotal {
+         font-weight: bold;
+         text-align: right;
+      }
    }
 }
 @include breakpoint(md) {
-   
    .page-header {
       padding: 0 32px;
       box-sizing: border-box;
@@ -313,16 +343,24 @@ p , button {
       min-height: 630px;
    }
 }
+@include breakpoint(sm) {
+   .basket {
+      width: 500px;
+   }
+}
 @include breakpoint(xs) {
-   
    .page-header {
       padding: 0 16px;
    }
-   .page-header__btn-account, .page-header__btn-cart {
+   .page-header__btn-account,
+   .page-header__btn-cart {
       display: none;
    }
    .page-header__btn-menu .menu-burger {
       margin: 0;
+   }
+   .basket {
+      font-size: 16px;
    }
 }
 .heading {
@@ -380,7 +418,7 @@ p , button {
       width: 360px;
       position: relative;
       box-sizing: border-box;
-      background-color: #F8F8F8;
+      background-color: #f8f8f8;
       margin-bottom: 30px;
       &:hover .products-item-btn {
          display: flex;
@@ -433,18 +471,18 @@ p , button {
          display: block;
          margin: 0 0 12px 0;
          text-transform: uppercase;
-         @include text (400, 13px, 16px);
+         @include text(400, 13px, 16px);
          color: $black;
       }
       &-txt {
          margin: 0 0 18px 0;
-         @include text ($weight: 300);
+         @include text($weight: 300);
          color: #5d5d5d;
       }
       &-price {
          display: block;
          margin: 0;
-         @include text (400, 16px, 19px);
+         @include text(400, 16px, 19px);
          color: $pink;
       }
       &-btn {
@@ -481,7 +519,7 @@ p , button {
          background-color: $pink;
          border: 2px solid $pink;
          box-sizing: border-box;
-         @include text (400, 16px, 19px);
+         @include text(400, 16px, 19px);
          text-align: center;
          word-break: break-all;
          color: $white;
@@ -500,7 +538,6 @@ p , button {
    }
 }
 @include breakpoint(md) {
-   
    .products {
       padding: 0 16px;
       box-sizing: border-box;
@@ -510,7 +547,6 @@ p , button {
    }
 }
 @include breakpoint(xs) {
-
    .products {
       justify-content: center;
       padding: 0 8px;
@@ -564,12 +600,12 @@ p , button {
          display: block;
          width: 100%;
          margin: 0 0 16px 0;
-         @include text (400, 20px, 24px);
+         @include text(400, 20px, 24px);
          color: $white;
          text-align: center;
       }
       &-txt {
-         @include text ($weight: 300);
+         @include text($weight: 300);
          text-align: center;
          color: $white;
       }
@@ -592,7 +628,6 @@ p , button {
    }
 }
 @include breakpoint(xs) {
-
    .features {
       padding: 0;
    }
@@ -649,7 +684,7 @@ p , button {
          box-sizing: border-box;
       }
       &-txt {
-         @include text (400, 20px, 24px);
+         @include text(400, 20px, 24px);
          text-align: center;
          color: $black;
          word-break: break-word;
@@ -671,12 +706,12 @@ p , button {
    &-title {
       display: block;
       margin: 12px 0 0;
-      @include text (700, 24px, 40px);
+      @include text(700, 24px, 40px);
    }
    &-subtitle {
       display: block;
       margin: 0 0 32px 0;
-      @include text (400, 18px, 30px);
+      @include text(400, 18px, 30px);
    }
    &-form {
       display: flex;
@@ -693,7 +728,7 @@ p , button {
          border: none;
          border-radius: 25px 0 0 25px;
          background-color: #e1e1e1;
-         @include text() ;
+         @include text();
          color: $black;
          opacity: 0.67;
       }
@@ -743,7 +778,6 @@ p , button {
    }
 }
 @include breakpoint(xs) {
-
    .subscribe {
       padding: 64px 16px 110px;
       background-size: 476%;
@@ -779,7 +813,8 @@ p , button {
    .subscribe-form {
       width: 100%;
    }
-   .subscribe-form-email, .subscribe-form-btn {
+   .subscribe-form-email,
+   .subscribe-form-btn {
       padding: 4% 6%;
    }
    .subscribe-form-email {
@@ -807,7 +842,7 @@ p , button {
       align-items: center;
    }
    &-txt {
-      @include text (400, 16px, 19px);
+      @include text(400, 16px, 19px);
       color: $white;
       margin: 0;
    }
@@ -847,7 +882,6 @@ p , button {
    }
 }
 @include breakpoint(xs) {
-
    .page-footer {
       padding: 0 16px 9px;
    }
